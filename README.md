@@ -1,3 +1,2 @@
-# Practice
-Implementation of data structures and algorithms
 # miniature-palm-tree
+Implementation of data structures and algorithms
