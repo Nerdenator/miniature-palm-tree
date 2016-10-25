@@ -16,11 +16,26 @@ package c02_searching;
  */
 public class BinarySearch {
 
-	// O(log n)
+	/**
+	 * Search recursively in O(n) time
+	 * 
+	 * @param A array to search in
+	 * @param x element to search for
+	 * @return position of x in A or -1 if not found
+	 */
 	public static int binarySearchRecursive(int[] A, int x) {
 		return binarySearchRecursive(A, 0, A.length - 1, x);
 	}
 
+	/**
+	 * Search recursively in progressively smaller halves of the array
+	 * 
+	 * @param A array to search in
+	 * @param left left-index in A we're looking past
+	 * @param right right-index in A we're looking up to
+	 * @param x element to search for
+	 * @return position of x in A or -1 if not found
+	 */
 	private static int binarySearchRecursive(int[] A, int left, int right, int x) {
 		//element not found
 		if (left > right)
@@ -43,7 +58,13 @@ public class BinarySearch {
 		return -1;
 	}
 
-	//O(log n)
+	/**
+	 * Search iteratively in O(n) time
+	 * 
+	 * @param A array to search in
+	 * @param x element to search for
+	 * @return position of x in A or -1 if not found
+	 */
 	public static int binarySearchIterative(int[] A, int x) {
 		int left = 0;
 		int right = A.length - 1;
