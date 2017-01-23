@@ -1,8 +1,10 @@
-package c02_searching;
+package searching_test;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import searching_src.BinarySearch;
 
 public class BinarySearchTest {
 	int[] empty;

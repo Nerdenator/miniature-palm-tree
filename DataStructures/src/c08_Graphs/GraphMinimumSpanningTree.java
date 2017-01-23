@@ -8,7 +8,6 @@ package c08_Graphs;
  * @author adina
  *
  */
-@SuppressWarnings({ "rawtypes", "unchecked" })
 public class GraphMinimumSpanningTree {
 
 	public static String Kurskal(InterfaceUnweightedGraph graph) {

@@ -1,4 +1,4 @@
-package c03_dynamic_programming;
+package dynamic_programming_src;
 
 //Print Fibonacci Series (Dynamic Programming)
 public class FibonacciDP {

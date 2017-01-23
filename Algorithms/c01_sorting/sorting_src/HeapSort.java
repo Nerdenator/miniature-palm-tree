@@ -1,4 +1,4 @@
-package c01_sorting;
+package sorting_src;
 
 import java.util.PriorityQueue;
 

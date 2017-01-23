@@ -1,4 +1,4 @@
-package c01_sorting;
+package sorting_src;
 /*
  * Go through the entire array 
  * Find the minimum element in the rest of the array and swap it with the current element

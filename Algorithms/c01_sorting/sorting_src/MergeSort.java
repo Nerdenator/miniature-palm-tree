@@ -1,4 +1,4 @@
-package c01_sorting;
+package sorting_src;
 /*
  * Split the array down the middle recursively and  merge the two sorted halves
  * Analysis: merge method takes O(n)

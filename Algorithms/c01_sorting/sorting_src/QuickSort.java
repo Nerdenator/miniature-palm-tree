@@ -1,4 +1,4 @@
-package c01_sorting;
+package sorting_src;
 
 /*
  * Choose a pivot value from a data set and split the set into two subsets: 

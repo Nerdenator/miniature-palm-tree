@@ -1,10 +1,12 @@
-package c01_sorting;
+package sorting_test;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class QuickSortTest {
+import sorting_src.BubbleSort;
+
+public class BubbleSortTest {
 	int[] empty;
 	int[] empty_expected;
 	int[] one;
@@ -31,38 +33,57 @@ public class QuickSortTest {
 	}
 
 	@Test
-	public void testQuickSortSimple() {
-		QuickSort.sortSimple(empty);
+	public void testBubbleSortBasic() {
+		BubbleSort.sortBasic(empty);
 		Assert.assertArrayEquals(empty_expected, empty);
 
-		QuickSort.sortSimple(one);
+		BubbleSort.sortBasic(one);
 		Assert.assertArrayEquals(one_expected, one);
 
-		QuickSort.sortSimple(sorted);
+		BubbleSort.sortBasic(sorted);
 		Assert.assertArrayEquals(sorted_expected, sorted);
 
-		QuickSort.sortSimple(reverse);
+		BubbleSort.sortBasic(reverse);
 		Assert.assertArrayEquals(reverse_expected, reverse);
 
-		QuickSort.sortSimple(any);
+		BubbleSort.sortBasic(any);
 		Assert.assertArrayEquals(any_expected, any);
 	}
 
 	@Test
-	public void testQuickSort() {
-		QuickSort.sort(empty);
+	public void testBubbleSortImproved() {
+		BubbleSort.sortImproved(empty);
 		Assert.assertArrayEquals(empty_expected, empty);
 
-		QuickSort.sort(one);
+		BubbleSort.sortImproved(one);
 		Assert.assertArrayEquals(one_expected, one);
 
-		QuickSort.sort(sorted);
+		BubbleSort.sortImproved(sorted);
 		Assert.assertArrayEquals(sorted_expected, sorted);
 
-		QuickSort.sort(reverse);
-		Assert.assertArrayEquals(reverse_expected, reverse);
+		BubbleSort.sortImproved(reverse);
+		Assert.assertArrayEquals(sorted_expected, reverse);
 
-		QuickSort.sort(any);
+		BubbleSort.sortImproved(any);
 		Assert.assertArrayEquals(any_expected, any);
 	}
+
+	@Test
+	public void testBubbleSortBest() {
+		BubbleSort.sortBest(empty);
+		Assert.assertArrayEquals(empty_expected, empty);
+
+		BubbleSort.sortBest(one);
+		Assert.assertArrayEquals(one_expected, one);
+
+		BubbleSort.sortBest(sorted);
+		Assert.assertArrayEquals(sorted_expected, sorted);
+
+		BubbleSort.sortBest(reverse);
+		Assert.assertArrayEquals(sorted_expected, reverse);
+
+		BubbleSort.sortBest(any);
+		Assert.assertArrayEquals(any_expected, any);
+	}
+
 }

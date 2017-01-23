@@ -1,22 +1,8 @@
-package c01_sorting;
+package sorting_src;
 
 /**
  * Compare consecutive elements and swap if necessary.
- * Best algorithm observes that elements after last swap never get moved
- * again so it only looks up to that point in subsequent swaps.
  * Requires O(n^2) swaps in worst case.
- * 
- * Worst-case performance: O(n^2) - array in reverse order
- * Best-case performance: O(n) - already sorted array
- * Average performance: O(n^2)
- * Worst-case space complexity: O(1) constant
- *
- * STABLE - maintains relative order of items with equal keys
- * IN-PLACE - transforms input using a data structure with a small, constant
- * amount of extra storage space
- * 
- * Invariant = everything after the last swap is sorted. In the simpler
- * algorithm, everything up to the last element is sorted.
  * 
  * @author adina
  */
@@ -77,7 +63,8 @@ public class BubbleSort {
 		int newn = n;
 		boolean swapped = true;
 
-		do {
+		// repeat as long as items have been swapped
+		while (swapped) {
 			// no swap occurred yet
 			swapped = false;
 			for (int i = 0; i < n - 1; i++) {
@@ -92,7 +79,6 @@ public class BubbleSort {
 			// nothing past the last swap needs to move
 			n = newn;
 		}
-		// as long as items have been swapped
-		while (swapped);
+
 	}
 }

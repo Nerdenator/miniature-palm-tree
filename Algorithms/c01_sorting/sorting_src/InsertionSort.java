@@ -1,13 +1,8 @@
-package c01_sorting;
+package sorting_src;
 /*
  * Starting with the second element, take each element out, and insert it in its correct location
  * while moving all elements that are larger than it one position right
- * Analysis: runs in O(n^2) time in worst case (array in reverse order), O(n) time if array is sorted
- * Space O(1) CONSTANT
- * STABLE
- * IN-PLACE
  *  
- * Invariant: everything up to current index is sorted
  * Insertion sort is an efficient way to add new elements to a pre-sorted list
  * especially suitable for sorting small data sets 
  * often used as a building block for other, more complicated sorting algorithms
@@ -27,7 +22,8 @@ public class InsertionSort {
 	// insert to the left of the current index
 	public static void sort(int[] A) {
 		for (int i = 1; i < A.length; i++) {
-			// want to insert val = A[i] in the correct position between 0 and i-1
+			// want to insert val = A[i] in the correct position between 0 and
+			// i-1
 			int val = A[i];
 			// move all greater elements to the right
 			int j = i - 1;

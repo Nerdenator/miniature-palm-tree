@@ -1,4 +1,4 @@
-package c01_sorting;
+package sorting_src;
 /*
  * Modification to insertion sort: does insertion sort on elements situated at gap-distance
  * apart

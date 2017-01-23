@@ -1,10 +1,12 @@
-package c01_sorting;
+package sorting_test;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class HeapSortTest {
+import sorting_src.QuickSort;
+
+public class QuickSortTest {
 	int[] empty;
 	int[] empty_expected;
 	int[] one;
@@ -31,21 +33,38 @@ public class HeapSortTest {
 	}
 
 	@Test
-	public void testHeapSort() {
-		HeapSort.sort(empty);
+	public void testQuickSortSimple() {
+		QuickSort.sortSimple(empty);
 		Assert.assertArrayEquals(empty_expected, empty);
 
-		HeapSort.sort(one);
+		QuickSort.sortSimple(one);
 		Assert.assertArrayEquals(one_expected, one);
 
-		HeapSort.sort(sorted);
+		QuickSort.sortSimple(sorted);
 		Assert.assertArrayEquals(sorted_expected, sorted);
 
-		HeapSort.sort(reverse);
+		QuickSort.sortSimple(reverse);
 		Assert.assertArrayEquals(reverse_expected, reverse);
 
-		HeapSort.sort(any);
+		QuickSort.sortSimple(any);
 		Assert.assertArrayEquals(any_expected, any);
 	}
 
+	@Test
+	public void testQuickSort() {
+		QuickSort.sort(empty);
+		Assert.assertArrayEquals(empty_expected, empty);
+
+		QuickSort.sort(one);
+		Assert.assertArrayEquals(one_expected, one);
+
+		QuickSort.sort(sorted);
+		Assert.assertArrayEquals(sorted_expected, sorted);
+
+		QuickSort.sort(reverse);
+		Assert.assertArrayEquals(reverse_expected, reverse);
+
+		QuickSort.sort(any);
+		Assert.assertArrayEquals(any_expected, any);
+	}
 }

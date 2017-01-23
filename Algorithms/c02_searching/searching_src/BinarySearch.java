@@ -1,4 +1,4 @@
-package c02_searching;
+package searching_src;
 
 /**
  * Search algorithm that finds position of a target value in a sorted array.

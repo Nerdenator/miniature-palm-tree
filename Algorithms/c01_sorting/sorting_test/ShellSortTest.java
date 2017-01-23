@@ -1,10 +1,12 @@
-package c01_sorting;
+package sorting_test;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SelectionSortTest {
+import sorting_src.ShellSort;
+
+public class ShellSortTest {
 	int[] empty;
 	int[] empty_expected;
 	int[] one;
@@ -31,20 +33,20 @@ public class SelectionSortTest {
 	}
 
 	@Test
-	public void testSelectionSort() {
-		SelectionSort.sort(empty);
+	public void testShellSort() {
+		ShellSort.sort(empty);
 		Assert.assertArrayEquals(empty_expected, empty);
 
-		SelectionSort.sort(one);
+		ShellSort.sort(one);
 		Assert.assertArrayEquals(one_expected, one);
 
-		SelectionSort.sort(sorted);
+		ShellSort.sort(sorted);
 		Assert.assertArrayEquals(sorted_expected, sorted);
 
-		SelectionSort.sort(reverse);
+		ShellSort.sort(reverse);
 		Assert.assertArrayEquals(reverse_expected, reverse);
 
-		SelectionSort.sort(any);
+		ShellSort.sort(any);
 		Assert.assertArrayEquals(any_expected, any);
 	}
 

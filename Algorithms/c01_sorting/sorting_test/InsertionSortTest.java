@@ -1,8 +1,10 @@
-package c01_sorting;
+package sorting_test;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import sorting_src.InsertionSort;
 
 public class InsertionSortTest {
 	int[] empty;

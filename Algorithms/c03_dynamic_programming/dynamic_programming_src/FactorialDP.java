@@ -1,4 +1,4 @@
-package c03_dynamic_programming;
+package dynamic_programming_src;
 
 import java.util.ArrayList;
 
