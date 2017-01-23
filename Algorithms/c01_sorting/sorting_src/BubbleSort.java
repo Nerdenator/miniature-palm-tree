@@ -4,6 +4,8 @@ package sorting_src;
  * Compare consecutive elements and swap if necessary.
  * Requires O(n^2) swaps in worst case.
  * 
+ * Worst-case runtime: O(n^2)
+ * 
  * @author adina
  */
 
