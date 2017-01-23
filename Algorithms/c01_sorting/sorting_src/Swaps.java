@@ -2,16 +2,14 @@ package sorting_src;
 
 public class Swaps {
 
-	public static void swapXOR(int[] a, int i, int j) {// in place with XOR
-		if (i != j) {
-			a[i] = a[i] ^ a[j];
-			a[j] = a[i] ^ a[j];
-			a[i] = a[i] ^ a[j];
-		}
-	}
-
-	public static void swapTemp(int[] a, int i, int j) {// the normal way to do
-														// it
+	/**
+	 * Using additional auxiliary variable (normal way to do it)
+	 * 
+	 * @param a array
+	 * @param i first index to swap
+	 * @param j second index to swap
+	 */
+	public static void swapTemp(int[] a, int i, int j) {
 		if (i != j) {
 			int temp = a[i];
 			a[i] = a[j];
@@ -19,12 +17,33 @@ public class Swaps {
 		}
 	}
 
-	public static void swapMath(int[] a, int i, int j) {// in place with
-														// arithmetics
+	/**
+	 * In-place using arithmetic
+	 * 
+	 * @param a array
+	 * @param i first index to swap
+	 * @param j second index to swap
+	 */
+	public static void swapMath(int[] a, int i, int j) {
 		if (i != j) {
 			a[i] = a[i] + a[j];
 			a[j] = a[i] - a[j];
 			a[i] = a[i] - a[j];
+		}
+	}
+
+	/**
+	 * In-place using XOR (true only when inputs differ)
+	 * 
+	 * @param a array
+	 * @param i first index to swap
+	 * @param j second index to swap
+	 */
+	public static void swapXOR(int[] a, int i, int j) {
+		if (i != j) {
+			a[i] = a[i] ^ a[j];
+			a[j] = a[i] ^ a[j];
+			a[i] = a[i] ^ a[j];
 		}
 	}
 
