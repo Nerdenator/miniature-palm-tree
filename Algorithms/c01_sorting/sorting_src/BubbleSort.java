@@ -21,7 +21,9 @@ public class BubbleSort {
 			for (int i = 0; i < n - 1; i++) {
 				if (array[i] > array[i + 1]) {
 					// swap array elements between i and i+1
-					Swaps.swapTemp(array, i, i + 1);
+					int aux = array[i];
+					array[i] = array[i + 1];
+					array[i + 1] = aux;
 				}
 			}
 		}
@@ -42,7 +44,10 @@ public class BubbleSort {
 			for (int i = 0; i < n - 1; i++) {
 				if (array[i] > array[i + 1]) {
 					// swap items
-					Swaps.swapTemp(array, i, i + 1);
+					int aux = array[i];
+					array[i] = array[i + 1];
+					array[i + 1] = aux;
+
 					swapped = true;
 				}
 			}
@@ -71,7 +76,10 @@ public class BubbleSort {
 				// num_comparisons <= (n-1)+(n-1)+..+1 = n*(n-1)/2
 				if (array[i] > array[i + 1]) {
 					// swap elements and keep track of current location
-					Swaps.swapTemp(array, i, i + 1);
+					int aux = array[i];
+					array[i] = array[i + 1];
+					array[i + 1] = aux;
+
 					newn = i + 1;
 					swapped = true;
 				}
