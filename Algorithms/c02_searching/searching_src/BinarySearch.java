@@ -2,14 +2,8 @@ package searching_src;
 
 /**
  * Search algorithm that finds position of a target value in a sorted array.
- * It compares the target value to the middle element of the array;
- * if they are unequal, eliminate the half in which the target cannot lie
- * and search on the remaining half until successful.
  * 
  * Worst-case performance O(log n)
- * Best-case performance O(1)
- * Average performance O(log n)
- * Worst-case space complexity O(1)
  * 
  * @author Adina
  *
@@ -17,7 +11,7 @@ package searching_src;
 public class BinarySearch {
 
 	/**
-	 * Search recursively in O(n) time
+	 * Search recursively in O(log n) time
 	 * 
 	 * @param A array to search in
 	 * @param x element to search for
@@ -37,11 +31,13 @@ public class BinarySearch {
 	 * @return position of x in A or -1 if not found
 	 */
 	private static int binarySearchRecursive(int[] A, int left, int right, int x) {
-		//element not found
+		// element not found
 		if (left > right)
 			return -1;
 
+		// middle location
 		int mid = (left + right) / 2;
+
 		// found the element in the middle
 		if (A[mid] == x)
 			return mid;
@@ -59,7 +55,7 @@ public class BinarySearch {
 	}
 
 	/**
-	 * Search iteratively in O(n) time
+	 * Search iteratively in O(log n) time
 	 * 
 	 * @param A array to search in
 	 * @param x element to search for
@@ -68,10 +64,12 @@ public class BinarySearch {
 	public static int binarySearchIterative(int[] A, int x) {
 		int left = 0;
 		int right = A.length - 1;
+
 		while (left <= right) {
+			// middle element
 			int mid = (left + right) / 2;
 
-			//continue looking in the first half
+			// continue looking in the first half
 			if (x < A[mid])
 				right = mid - 1;
 

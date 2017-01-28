@@ -13,7 +13,7 @@ package sorting_src;
 public class InsertionSort {
 	/**
 	 * Start with empty sorted list and insert items in the appropriate place
-	 * - insert to the left of the current index
+	 * -> insert to the left of the current index
 	 * 
 	 * @param A array to sort
 	 */
