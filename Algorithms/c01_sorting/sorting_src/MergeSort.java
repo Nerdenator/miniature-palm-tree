@@ -63,7 +63,8 @@ public class MergeSort {
 		// index that goes through the entire array to get it in order
 		int idx = low;
 
-		// copy the array to save it, since Java changes by reference
+		// copy the array so that past changes in place don't affect future
+		// changes
 		int[] copyA = A.clone();
 
 		// sort A given copyA and the indices
