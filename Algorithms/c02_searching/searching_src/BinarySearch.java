@@ -36,7 +36,7 @@ public class BinarySearch {
 			return -1;
 
 		// middle location
-		int mid = (left + right) / 2;
+		int mid = (right - left) / 2 + left; // (left + right) / 2
 
 		// found the element in the middle
 		if (A[mid] == x)
@@ -67,7 +67,7 @@ public class BinarySearch {
 
 		while (left <= right) {
 			// middle element
-			int mid = (left + right) / 2;
+			int mid = (right - left) / 2 + left; // (left + right) / 2
 
 			// continue looking in the first half
 			if (x < A[mid])
