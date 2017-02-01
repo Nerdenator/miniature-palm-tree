@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="c02_Queues"/>
-	<classpathentry kind="src" path="c04_LinkedLists"/>
-	<classpathentry kind="src" path="c01_ArrayLists"/>
-	<classpathentry kind="src" path="c03_Stacks"/>
-	<classpathentry kind="src" path="c05_HashTables"/>
-	<classpathentry kind="src" path="c06_BinaryTrees"/>
-	<classpathentry kind="src" path="c07_Heaps"/>
-	<classpathentry kind="src" path="c08_Graphs"/>
+	<classpathentry kind="src" path="arrayLists"/>
+	<classpathentry kind="src" path="queues"/>
+	<classpathentry kind="src" path="stacks"/>
+	<classpathentry kind="src" path="linkedLists"/>
+	<classpathentry kind="src" path="hashTables"/>
+	<classpathentry kind="src" path="binaryTrees"/>
+	<classpathentry kind="src" path="heaps"/>
+	<classpathentry kind="src" path="graphs"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
