@@ -20,3 +20,9 @@ Implementation of data structures and algorithms
 | - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/bubbleSort/BubbleSort.java)  | - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/insertionSort/InsertionSort.java)|    - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/selectionSort/SelectionSort.java) | - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/mergeSort/MergeSort.java) |
 
 # Data Structures
+
+| Dynamic Arrays |
+| -------------- |
+| - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/dynamicArrays/dynamicArrays/DynamicArray.java) |
+| - [Notes on theory](https://goo.gl/uVgZ0m) |
+| - [Notes on Java API](https://goo.gl/yWLsPT) |
