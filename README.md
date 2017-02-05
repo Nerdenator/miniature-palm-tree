@@ -21,8 +21,8 @@ Implementation of data structures and algorithms
 
 # Data Structures
 
-| Dynamic Arrays |
-| -------------- |
-| - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/dynamicArrays/dynamicArrays/DynamicArray.java) |
-| - [Notes on theory](https://goo.gl/uVgZ0m) |
-| - [Notes on Java API](https://goo.gl/yWLsPT) |
+| Arrays | Dynamic Arrays |
+| ------ | -------------- |
+|  | - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/dynamicArrays/dynamicArrays/DynamicArray.java) |
+| - [Unsorted](https://goo.gl/Ao7izn), [Sorted](https://goo.gl/R5vnUJ) | - [Theory](https://goo.gl/uVgZ0m) |
+| - [Java API](https://goo.gl/gt35qv) | - [Java API](https://goo.gl/yWLsPT) |
