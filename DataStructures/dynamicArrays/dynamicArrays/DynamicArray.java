@@ -4,19 +4,12 @@ package dynamicArrays;
  * Implement an ArrayList that allows resizing of the array, constant element
  * access and constant (amortized) insertion
  * 
- * ArrayList properties
- * - Getting or setting the value at a particular index (constant time)
- * - Iterating over the elements in order (linear time, good cache performance)
- * - Inserting or deleting an element in the middle of the array (linear time)
- * - Inserting or deleting an element at the end of the array (constant
- * amortized time)
- * 
  * @author adina
  */
 public class DynamicArray {
-	// underlying object is an array of size arrSz
+	// underlying object is an array of size capacity
 	private Object[] array;
-	private int arrSize;
+	private int capacity;
 
 	// index up to which the array has been filled
 	private int lastFilledIdx;
@@ -24,65 +17,43 @@ public class DynamicArray {
 	// resize factor
 	private double factor;
 
-	// default array size and resize factor
-	private final static int defaultArrSize = 5;
+	// default array capacity and resize factor
+	private final static int defaultCapacity = 5;
 	private final static double defaultFactor = 2;
 
 	/**
-	 * Get around this() having to be called first in a method.
-	 * Construct an DynamicArray given an array size and a factor
+	 * Construct empty DynamicArray with given capacity and factor
 	 * 
-	 * @param arrSize
-	 * @param factor
-	 * @throws Exception
-	 */
-	private void constructDynamicArray(int arrSize, double factor) throws Exception {
-		if (factor <= 0)
-			throw new Exception("factor has to be > 0");
-		if (arrSize < 0)
-			throw new Exception("arrSize has to be >= 0");
-
-		this.lastFilledIdx = -1;
-		this.arrSize = arrSize;
-		this.array = new Object[arrSize];
-		this.factor = factor;
-	}
-
-	/**
-	 * Constructor: construct an empty DynamicArray with given size and factor
-	 * 
-	 * @param maxSz: size of the back-up array
+	 * @param capacity: capacity of the back-up array
 	 * @param factor: factor for resizing
 	 * @throws Exception
 	 */
-	public DynamicArray(int arrSize, double factor) throws Exception {
-		constructDynamicArray(arrSize, factor);
+	public DynamicArray(int capacity, double factor) throws Exception {
+		constructDynamicArray(capacity, factor);
 	}
 
 	/**
-	 * Constructor: construct an empty DynamicArray with given array size and
-	 * default factor
+	 * Construct empty DynamicArray with given array capacity and default factor
 	 * 
-	 * @param maxSz
+	 * @param capacity: capacity of the back-up array
 	 * @throws Exception
 	 */
-	public DynamicArray(int arrSize) throws Exception {
-		this(arrSize, defaultFactor);
+	public DynamicArray(int capacity) throws Exception {
+		this(capacity, defaultFactor);
 	}
 
 	/**
-	 * Constructor: construct an empty DynamicArray with default array size and
-	 * default factor
+	 * Construct empty DynamicArray with default array capacity and default
+	 * factor
 	 * 
 	 * @throws Exception
 	 */
 	public DynamicArray() throws Exception {
-		this(defaultArrSize);
+		this(defaultCapacity);
 	}
 
 	/**
-	 * 
-	 * Constructor: construct an DynamicArray from a given array
+	 * Construct a DynamicArray from a given array and given factor
 	 * 
 	 * @param A: the back-up array
 	 * @param factor: factor for resizing
@@ -93,14 +64,13 @@ public class DynamicArray {
 			throw new Exception("Array can't be null");
 		constructDynamicArray(A.length, factor);
 		this.array = A;
-		this.lastFilledIdx = arrSize - 1;
+		this.lastFilledIdx = capacity - 1;
 	}
 
 	/**
-	 * Constructor: construct an DynamicArray from a given array, with default
-	 * factor
+	 * Construct DynamicArray from given array, with default factor
 	 * 
-	 * @param A
+	 * @param A: the back-up array
 	 * @throws Exception
 	 */
 	public DynamicArray(Object[] A) throws Exception {
@@ -108,24 +78,45 @@ public class DynamicArray {
 	}
 
 	/**
+	 * Construct an DynamicArray given an array capacity and a factor
+	 * 
+	 * @param capacity: capacity of the back-up array
+	 * @param factor: factor for resizing
+	 * @throws Exception
+	 */
+	private void constructDynamicArray(int capacity, double factor) throws Exception {
+		if (factor <= 0)
+			throw new Exception("factor has to be > 0");
+		if (capacity < 0)
+			throw new Exception("capacity has to be >= 0");
+
+		this.lastFilledIdx = -1;
+		this.capacity = capacity;
+		this.array = new Object[capacity];
+		this.factor = factor;
+	}
+
+	// =============================================================
+
+	/**
 	 * Set the value of the element at given index in O(1)
 	 * 
 	 * @param index
-	 * @param element
+	 * @param value to set element at index to
 	 * @throws Exception if index is < 0 or index > lastFilledIdx
 	 */
-	public void set(int index, Object element) throws Exception {
+	public void set(int index, Object value) throws Exception {
 		if (index < 0 || index > lastFilledIdx)
 			throw new IndexOutOfBoundsException("Index has to be >= 0 and <= lastFilledIdx");
 
-		array[index] = element;
+		array[index] = value;
 	}
 
 	/**
-	 * Get the element at given index in O(1)
+	 * Get the value of the element at given index in O(1)
 	 * 
 	 * @param index
-	 * @return element at index
+	 * @return value of element at index
 	 * @throws Exception if index is out of bounds
 	 */
 	public Object get(int index) throws Exception {
@@ -137,35 +128,34 @@ public class DynamicArray {
 
 	/**
 	 * Insert an element at the end of the array (constant amortized time O(1))
-	 * Append the element at the last index
 	 * 
 	 * @param element
 	 */
 	public void add(Object element) {
-		// if we ran out of space, increase the size
+		// if we ran out of space, increase the capacity
 		if (array.length == ++lastFilledIdx) {
-			increaseSize();
+			increaseCapacity();
 		}
-		// otherwise just stick the element in there
+		// add the element at the last index
 		array[lastFilledIdx] = element;
 	}
 
 	/**
-	 * Increase the size of the array by a factor
+	 * Increase the capacity of the array by the current factor
 	 */
-	private void increaseSize() {
-		// if the array was originally empty, make it size = defaultSize
-		arrSize = (int) ((arrSize == 0) ? defaultArrSize : arrSize * factor);
-		Object[] array_new = new Object[arrSize];
+	private void increaseCapacity() {
+		// if the array was originally empty, make it capacity = defaultCapacity
+		capacity = (int) ((capacity == 0) ? defaultCapacity : capacity * factor);
+		Object[] array_new = new Object[capacity];
+		// copy the current array over
 		for (int i = 0; i < lastFilledIdx; i++)
 			array_new[i] = array[i];
+		// use the new array
 		array = array_new;
 	}
 
 	/**
-	 * Delete an element from the end of the array (constant amortized time
-	 * O(1))
-	 * Delete the element at the last index and decrease index
+	 * Delete the element at the end of the array (constant amortized time O(1))
 	 */
 	public void delete() {
 		if (lastFilledIdx < 0)
@@ -177,8 +167,8 @@ public class DynamicArray {
 	}
 
 	/**
-	 * Insert at index (linear time because all elements to the right of index
-	 * need to be shifted right)
+	 * Insert new value at given index (linear time because all elements to the
+	 * right of index need to be shifted right)
 	 * 
 	 * @param idx index to insert at
 	 * @param val value to insert
@@ -187,9 +177,9 @@ public class DynamicArray {
 		if (idx > lastFilledIdx || idx < 0)
 			throw new IndexOutOfBoundsException("Index has to be >= 0 and <= lastFilledIdx");
 		// last filled index increases,
-		// and array size is increased if we've reached max
+		// and array capacity is increased if we've reached max
 		if (array.length == ++lastFilledIdx)
-			increaseSize();
+			increaseCapacity();
 		// move everything over to the right by 1 starting at idx
 		for (int i = lastFilledIdx; i > idx; i--)
 			array[i] = array[i - 1];
@@ -198,10 +188,10 @@ public class DynamicArray {
 	}
 
 	/**
-	 * Delete at index (linear time, because all elements to the right of index
-	 * need to be shifted left)
+	 * Delete the element at index (linear time, because all elements to the
+	 * right of index need to be shifted left)
 	 * 
-	 * @param idx index to delete at
+	 * @param idx index at which to delete
 	 */
 	public void deleteAt(int idx) {
 		if (idx > lastFilledIdx || idx < 0)
@@ -214,12 +204,22 @@ public class DynamicArray {
 		lastFilledIdx--;
 	}
 
+	/**
+	 * Get the last index filled in the array
+	 * 
+	 * @return the last filled index
+	 */
 	public int getLastIndex() {
 		return lastFilledIdx;
 	}
 
-	public int getArraySize() {
-		return arrSize;
+	/**
+	 * Get the current array capacity
+	 * 
+	 * @return current array capacity
+	 */
+	public int getArrayCapacity() {
+		return capacity;
 	}
 
 	/**

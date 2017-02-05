@@ -24,32 +24,32 @@ public class DynamicArrayTest {
 	@Test
 	public void testAdd() {
 		Assert.assertEquals("[]", dArr.toString());
-		Assert.assertEquals(2, dArr.getArraySize());
+		Assert.assertEquals(2, dArr.getArrayCapacity());
 		Assert.assertEquals(-1, dArr.getLastIndex());
 
 		dArr.add(2);
 		Assert.assertEquals("[2]", dArr.toString());
-		Assert.assertEquals(2, dArr.getArraySize());
+		Assert.assertEquals(2, dArr.getArrayCapacity());
 		Assert.assertEquals(0, dArr.getLastIndex());
 
 		dArr.add(3);
 		Assert.assertEquals("[2, 3]", dArr.toString());
-		Assert.assertEquals(2, dArr.getArraySize());
+		Assert.assertEquals(2, dArr.getArrayCapacity());
 		Assert.assertEquals(1, dArr.getLastIndex());
 
 		dArr.add(4);
 		Assert.assertEquals("[2, 3, 4]", dArr.toString());
-		Assert.assertEquals(4, dArr.getArraySize());
+		Assert.assertEquals(4, dArr.getArrayCapacity());
 		Assert.assertEquals(2, dArr.getLastIndex());
 
 		dArr.add(5);
 		Assert.assertEquals("[2, 3, 4, 5]", dArr.toString());
-		Assert.assertEquals(4, dArr.getArraySize());
+		Assert.assertEquals(4, dArr.getArrayCapacity());
 		Assert.assertEquals(3, dArr.getLastIndex());
 
 		dArr.add(6);
 		Assert.assertEquals("[2, 3, 4, 5, 6]", dArr.toString());
-		Assert.assertEquals(8, dArr.getArraySize());
+		Assert.assertEquals(8, dArr.getArrayCapacity());
 		Assert.assertEquals(4, dArr.getLastIndex());
 	}
 
@@ -108,20 +108,20 @@ public class DynamicArrayTest {
 
 	@Test
 	public void testInsertAt() {
-		Assert.assertEquals(2, dArr3.getArraySize());
+		Assert.assertEquals(2, dArr3.getArrayCapacity());
 		Assert.assertEquals(1, dArr3.getLastIndex());
 		Assert.assertEquals("[0, 1]", dArr3.toString());
 		dArr3.insertAt(0, -1);
 		Assert.assertEquals("[-1, 0, 1]", dArr3.toString());
-		Assert.assertEquals(4, dArr3.getArraySize());
+		Assert.assertEquals(4, dArr3.getArrayCapacity());
 		Assert.assertEquals(2, dArr3.getLastIndex());
 		dArr3.insertAt(1, 20);
 		Assert.assertEquals("[-1, 20, 0, 1]", dArr3.toString());
-		Assert.assertEquals(4, dArr3.getArraySize());
+		Assert.assertEquals(4, dArr3.getArrayCapacity());
 		Assert.assertEquals(3, dArr3.getLastIndex());
 		dArr3.insertAt(3, 40);
 		Assert.assertEquals("[-1, 20, 0, 40, 1]", dArr3.toString());
-		Assert.assertEquals(8, dArr3.getArraySize());
+		Assert.assertEquals(8, dArr3.getArrayCapacity());
 		Assert.assertEquals(4, dArr3.getLastIndex());
 	}
 
