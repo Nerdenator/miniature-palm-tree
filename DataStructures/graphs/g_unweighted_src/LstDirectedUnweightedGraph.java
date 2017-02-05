@@ -1,7 +1,10 @@
-package graphs_src;
+package g_unweighted_src;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import graphs.InterfaceUnweightedGraph;
+import graphs.Vertex;
 
 /**
  * Represent a directed unweighted graph as an adjacency list and support some
@@ -17,7 +20,7 @@ import java.util.List;
  * @author adina
  *
  */
-public class Graph_Lst_DirUnw<MyType> implements InterfaceUnweightedGraph<MyType> {
+public class LstDirectedUnweightedGraph<MyType> implements InterfaceUnweightedGraph<MyType> {
 	// a list of vertices with associated labels
 	protected Vertex<MyType>[] vertices;
 	// number of vertices
@@ -31,7 +34,7 @@ public class Graph_Lst_DirUnw<MyType> implements InterfaceUnweightedGraph<MyType
 	protected int capacity;
 
 	@SuppressWarnings("unchecked")
-	public Graph_Lst_DirUnw(int capacity, Vertex<MyType>[] vertices) {
+	public LstDirectedUnweightedGraph(int capacity, Vertex<MyType>[] vertices) {
 		this.capacity = capacity;
 		this.numVertices = vertices.length;
 

@@ -1,4 +1,4 @@
-package graphs_test;
+package test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -7,11 +7,11 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import graphs_src.Graph_Lst_DirWei;
-import graphs_src.Graph_Lst_UndWei;
-import graphs_src.Graph_Mat_DirWei;
-import graphs_src.Graph_Mat_UndWei;
-import graphs_src.Vertex;
+import g_weighted_src.LstDirectedWeightedGraph;
+import g_weighted_src.LstUndirectedWeightedGraph;
+import g_weighted_src.MatDirectedWeightedGraph;
+import g_weighted_src.MatUndirectedWeightedGraph;
+import graphs.Vertex;
 
 public class Graph_AllTest {
 
@@ -22,16 +22,16 @@ public class Graph_AllTest {
 	Vertex<Integer>[] vert;
 
 	// undirected weighted graph represented as a matrix (undirected unweighted is identical except for the 2 extra methods)
-	Graph_Mat_UndWei<Integer> graph_MUW;
+	MatUndirectedWeightedGraph<Integer> graph_MUW;
 
 	// directed weighted graph represented as a matrix (directed unweighted is identical except for the 2 extra methods)
-	Graph_Mat_DirWei<Integer> graph_MDW;
+	MatDirectedWeightedGraph<Integer> graph_MDW;
 
 	// undirected weighted graph represented as a list (undirected unweighted is identical except for the 2 extra methods)
-	Graph_Lst_UndWei<Integer> graph_LUW;
+	LstUndirectedWeightedGraph<Integer> graph_LUW;
 
 	// directed weighted graph represented as a list (directed unweighted is identical except for the 2 extra methods)
-	Graph_Lst_DirWei<Integer> graph_LDW;
+	LstDirectedWeightedGraph<Integer> graph_LDW;
 
 	@SuppressWarnings("unchecked")
 	@Before
@@ -42,28 +42,28 @@ public class Graph_AllTest {
 			vert[v] = new Vertex<Integer>(v);
 
 		// undirected weighted graph represented as a matrix
-		graph_MUW = new Graph_Mat_UndWei<Integer>(capacity, vert);
+		graph_MUW = new MatUndirectedWeightedGraph<Integer>(capacity, vert);
 		graph_MUW.addEdge(0, 1);
 		graph_MUW.addEdge(1, 2);
 		graph_MUW.addEdge(0, 3);
 		graph_MUW.addEdge(3, 4);
 
 		// undirected weighted graph represented as a list
-		graph_LUW = new Graph_Lst_UndWei<Integer>(capacity, vert);
+		graph_LUW = new LstUndirectedWeightedGraph<Integer>(capacity, vert);
 		graph_LUW.addEdge(0, 1);
 		graph_LUW.addEdge(1, 2);
 		graph_LUW.addEdge(0, 3);
 		graph_LUW.addEdge(3, 4);
 
 		//directed weighted graph represented as a matrix
-		graph_MDW = new Graph_Mat_DirWei<Integer>(capacity, vert);
+		graph_MDW = new MatDirectedWeightedGraph<Integer>(capacity, vert);
 		graph_MDW.addEdge(0, 1);
 		graph_MDW.addEdge(1, 2);
 		graph_MDW.addEdge(0, 3);
 		graph_MDW.addEdge(3, 4);
 
 		//directed weighted graph represented as a list
-		graph_LDW = new Graph_Lst_DirWei<Integer>(capacity, vert);
+		graph_LDW = new LstDirectedWeightedGraph<Integer>(capacity, vert);
 		graph_LDW.addEdge(0, 1);
 		graph_LDW.addEdge(1, 2);
 		graph_LDW.addEdge(0, 3);

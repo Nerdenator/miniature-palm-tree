@@ -1,17 +1,27 @@
-package graphs_src;
+package g_unweighted_src;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import graphs.InterfaceUnweightedGraph;
+import graphs.Vertex;
+
 /**
- * Represent an unweighted directed graph as an adjacency matrix and support
+ * Represent an unweighted undirected graph as an adjacency matrix and support
  * some basic operations
+ * Requires O(n^2) space. When the graph G is dense, i.e. it has close to n^2
+ * edges, this memory usage may be acceptable.
+ * 
+ * Fun property: A*A counts the number of nodes k s.t. G contains both (i,k) and
+ * (k,j) (so how many nodes there are s.t. length of path from i to j is exactly
+ * 2)
+ * 
  * Space: O(n^2)
  * 
  * @author adina
  *
  */
-public class Graph_Mat_DirUnw<MyType> implements InterfaceUnweightedGraph<MyType> {
+public class MatUndirectedUnweightedGraph<MyType> implements InterfaceUnweightedGraph<MyType> {
 	// maximum number of vertices before resize
 	protected int capacity;
 	// the adjacency matrix
@@ -23,7 +33,7 @@ public class Graph_Mat_DirUnw<MyType> implements InterfaceUnweightedGraph<MyType
 	protected int numVertices;
 
 	@SuppressWarnings("unchecked")
-	public Graph_Mat_DirUnw(int capacity, Vertex<MyType>[] vertices) {
+	public MatUndirectedUnweightedGraph(int capacity, Vertex<MyType>[] vertices) {
 		this.capacity = capacity;
 		adjMat = new Integer[capacity][capacity];
 		this.numVertices = vertices.length;
@@ -48,7 +58,7 @@ public class Graph_Mat_DirUnw<MyType> implements InterfaceUnweightedGraph<MyType
 		// null if out of bounds
 		if (index >= numVertices || index < 0)
 			return null;
-		//  find label
+		// find label
 		return vertices[index].label;
 	}
 
@@ -138,7 +148,7 @@ public class Graph_Mat_DirUnw<MyType> implements InterfaceUnweightedGraph<MyType
 	}
 
 	/**
-	 * Add an edge between nodes x,y
+	 * Add an edge between nodes x,y and y,x
 	 * O(1)
 	 * 
 	 * @param x
@@ -146,11 +156,12 @@ public class Graph_Mat_DirUnw<MyType> implements InterfaceUnweightedGraph<MyType
 	 */
 	@Override
 	public void addEdge(int x, int y) {
-		// only add edge between two existing vertices
+		// only add edge between two existing vertices, with positive weight
 		if (x > numVertices || y > numVertices)
 			return;
 		// add the edge
 		adjMat[x][y] = 1;
+		adjMat[y][x] = 1;
 	}
 
 	/**
@@ -167,6 +178,8 @@ public class Graph_Mat_DirUnw<MyType> implements InterfaceUnweightedGraph<MyType
 			return;
 		// remove the edge
 		adjMat[x][y] = null;
+		adjMat[y][x] = null;
+
 	}
 
 	@Override
@@ -181,7 +194,7 @@ public class Graph_Mat_DirUnw<MyType> implements InterfaceUnweightedGraph<MyType
 	}
 
 	/**
-	 * Find all vertices adjacent to x: all y s.t. (x,y) or (y,x) is an edge
+	 * Find all vertices adjacent to x: all y s.t. (x,y) & (y,x) is an edge
 	 * O(n)
 	 * 
 	 * @param x
@@ -191,7 +204,7 @@ public class Graph_Mat_DirUnw<MyType> implements InterfaceUnweightedGraph<MyType
 	public List<Integer> getNeighborVertices(int x) {
 		List<Integer> adjacentVert = new ArrayList<Integer>();
 		for (int i = 0; i < numVertices; i++)
-			if (adjMat[i][x] != null || adjMat[x][i] != null)
+			if (adjMat[i][x] != null)
 				adjacentVert.add(i);
 		return adjacentVert;
 	}
@@ -233,36 +246,14 @@ public class Graph_Mat_DirUnw<MyType> implements InterfaceUnweightedGraph<MyType
 		System.out.println();
 	}
 
-	/**
-	 * Find all in-edges for x <=> all y s.t. (y,x) is an edge
-	 * O(n)
-	 * 
-	 * @param x
-	 * @return a list of all vertices y that are adjacent to x
-	 */
 	@Override
 	public List<Integer> getInEdges(int x) {
-		List<Integer> inEdges = new ArrayList<Integer>();
-		for (int i = 0; i < numVertices; i++)
-			if (adjMat[i][x] != null)
-				inEdges.add(i);
-		return inEdges;
+		return getNeighborVertices(x);
 	}
 
-	/**
-	 * Find all out-edges for x <=> all y s.t. (x,y) is an edge
-	 * O(n)
-	 * 
-	 * @param x
-	 * @return a list of all vertices y that are adjacent to x
-	 */
 	@Override
 	public List<Integer> getOutEdges(int x) {
-		List<Integer> outEdges = new ArrayList<Integer>();
-		for (int i = 0; i < numVertices; i++)
-			if (adjMat[x][i] != null)
-				outEdges.add(i);
-		return outEdges;
+		return getNeighborVertices(x);
 	}
 
 	@Override

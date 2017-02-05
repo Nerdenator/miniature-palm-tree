@@ -1,4 +1,4 @@
-package graphs_src;
+package graphs;
 
 /**
  * Class to represent a vertex in a graph.
@@ -15,9 +15,9 @@ public class Vertex<MyType> {
 		WHITE, GRAY, BLACK
 	}
 
-	MyType label;
-	boolean wasVisited;
-	Colors color;
+	public MyType label;
+	public boolean wasVisited;
+	public Colors color;
 
 	public Vertex(MyType label) {
 		// set the label

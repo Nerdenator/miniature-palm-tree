@@ -1,11 +1,15 @@
-package graphs_src;
+package g_weighted_src;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import g_unweighted_src.LstDirectedUnweightedGraph;
+import graphs.Vertex;
+import graphs.InterfaceWeightedGraph;
+
 /**
- * Represent an unweighted undirected graph as an adjacency list and support
- * some basic operations
+ * Represent a directed weighted graph as an adjacency list and support some
+ * basic operations
  * 
  * An adjacency list is an array of lists (or sometimes a list of lists). Each
  * individual list shows what vertices a given vertex is adjacent to.
@@ -16,11 +20,13 @@ import java.util.List;
  * @author adina
  *
  */
-public class Graph_Lst_UndWei<MyType> extends Graph_Lst_UndUnw<MyType> implements InterfaceWeightedGraph<MyType> {
+//TODO: weights better
+public class LstDirectedWeightedGraph<MyType> extends LstDirectedUnweightedGraph<MyType> implements InterfaceWeightedGraph<MyType> {
+
 	private List<Integer>[] adjListWeight;
 
 	@SuppressWarnings("unchecked")
-	public Graph_Lst_UndWei(int capacity, Vertex<MyType>[] vertices) {
+	public LstDirectedWeightedGraph(int capacity, Vertex<MyType>[] vertices) {
 		super(capacity, vertices);
 
 		// create the list of weights
@@ -48,7 +54,7 @@ public class Graph_Lst_UndWei<MyType> extends Graph_Lst_UndUnw<MyType> implement
 				adjList2[i] = adjList[i];
 
 			// copy adjacency weight list over
-			for (int i = 0; i < numVertices - 1; i++)
+			for (int i = 0; i < numVertices; i++)
 				adjListWeight2[i] = adjListWeight[i];
 
 			// save the new structures
@@ -117,7 +123,7 @@ public class Graph_Lst_UndWei<MyType> extends Graph_Lst_UndUnw<MyType> implement
 	}
 
 	/**
-	 * Add an edge with weight w between nodes x,y and y,x
+	 * Add an edge with weight w between nodes x,y
 	 * O(1)
 	 * 
 	 * @param x
@@ -127,12 +133,12 @@ public class Graph_Lst_UndWei<MyType> extends Graph_Lst_UndUnw<MyType> implement
 	@Override
 	public void addEdge(int x, int y, int w) {
 		// only add edge between two existing vertices, with positive weight
-		if (w < 0)
+		if (x > numVertices || y > numVertices || w < 0)
 			return;
-		super.addEdge(x, y);
+		// add the edge
+		adjList[x].add(y);
 		// add the edge
 		adjListWeight[x].add(w);
-		adjListWeight[y].add(w);
 	}
 
 	/**
@@ -152,7 +158,7 @@ public class Graph_Lst_UndWei<MyType> extends Graph_Lst_UndUnw<MyType> implement
 
 	/**
 	 * Remove the edge between the vertices x and y
-	 * O(max(deg(x), deg(y)))
+	 * O(deg(x))
 	 * 
 	 * @param x
 	 * @param y
@@ -169,13 +175,6 @@ public class Graph_Lst_UndWei<MyType> extends Graph_Lst_UndUnw<MyType> implement
 				adjListWeight[x].remove(i);
 				break;
 			}
-		for (int i = 0; i < adjList[y].size(); i++)
-			if (adjList[y].get(i) == x) {
-				adjList[y].remove(i);
-				adjListWeight[y].remove(i);
-				break;
-			}
-
 	}
 
 	/**
@@ -192,4 +191,5 @@ public class Graph_Lst_UndWei<MyType> extends Graph_Lst_UndUnw<MyType> implement
 		}
 		System.out.println();
 	}
+
 }

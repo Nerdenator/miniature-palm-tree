@@ -1,9 +1,11 @@
-package graphs_src;
+package graphs_algorithms_src;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
+
+import graphs.InterfaceUnweightedGraph;
 
 @SuppressWarnings({ "rawtypes", "unchecked" })
 public class GraphTraversals {

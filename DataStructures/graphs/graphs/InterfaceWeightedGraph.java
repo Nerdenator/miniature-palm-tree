@@ -1,4 +1,4 @@
-package graphs_src;
+package graphs;
 
 public interface InterfaceWeightedGraph<MyType> extends InterfaceUnweightedGraph<MyType> {
 

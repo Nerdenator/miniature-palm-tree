@@ -1,44 +1,49 @@
-package graphs_src;
+package g_unweighted_src;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import graphs.InterfaceUnweightedGraph;
+import graphs.Vertex;
+
 /**
- * Represent an unweighted undirected graph as an adjacency matrix and support
+ * Represent an undirected unweighted graph as an adjacency list and support
  * some basic operations
- * When the graph G is dense, i.e., it has close to n^2 edges, a memory usage of
- * n^2 may be acceptable.
  * 
- * Fun property: A*A counts the number of nodes k s.t. G contains both (i,k) and
- * (k,j) (so how many nodes there are s.t. length of path from i to j is exactly
- * 2)
+ * An adjacency list is an array of lists (or sometimes a list of lists). Each
+ * individual list shows what vertices a given vertex is adjacent to.
+ * List adj[x] contains all vertices y s.t. (x,y) is an edge
  * 
- * Space: O(n^2)
+ * Space: O(n+m), n vertices, m edges
  * 
  * @author adina
  *
  */
-public class Graph_Mat_UndUnw<MyType> implements InterfaceUnweightedGraph<MyType> {
-	// maximum number of vertices before resize
-	protected int capacity;
-	// the adjacency matrix
-	protected Integer[][] adjMat;
+public class LstUndirectedUnweightedGraph<MyType> implements InterfaceUnweightedGraph<MyType> {
 
 	// a list of vertices with associated labels
 	protected Vertex<MyType>[] vertices;
 	// number of vertices
 	protected int numVertices;
 
+	// an array of lists of vertices
+	// adjList[x] contains all vertices y s.t. (x,y) is an edge
+	protected List<Integer>[] adjList;
+	// maximum number of vertices before resize
+	protected int capacity;
+
 	@SuppressWarnings("unchecked")
-	public Graph_Mat_UndUnw(int capacity, Vertex<MyType>[] vertices) {
+	public LstUndirectedUnweightedGraph(int capacity, Vertex<MyType>[] vertices) {
 		this.capacity = capacity;
-		adjMat = new Integer[capacity][capacity];
 		this.numVertices = vertices.length;
 
 		this.vertices = new Vertex[capacity];
-		for (int i = 0; i < numVertices; i++) {
+		for (int i = 0; i < numVertices; i++)
 			this.vertices[i] = vertices[i];
-		}
+
+		adjList = new List[capacity];
+		for (int i = 0; i < numVertices; i++)
+			adjList[i] = new ArrayList<Integer>();
 	}
 
 	public int getCapacity() {
@@ -60,29 +65,33 @@ public class Graph_Mat_UndUnw<MyType> implements InterfaceUnweightedGraph<MyType
 	}
 
 	@Override
+	@SuppressWarnings("unchecked")
 	public void addVertex(MyType label) {
 		if (numVertices == capacity) {
 			// increase capacity
 			int capacity2 = capacity * 3 / 2;
-			Integer[][] adjMat2 = new Integer[capacity2][capacity2];
-			@SuppressWarnings("unchecked")
+			List<Integer>[] adjList2 = new List[capacity2];
 			Vertex<MyType>[] vertices2 = new Vertex[capacity2];
 
 			// copy vertices array over
 			for (int i = 0; i < numVertices; i++)
 				vertices2[i] = vertices[i];
-			// copy adjacency matrix over
+
+			// copy adjacency list over
 			for (int i = 0; i < numVertices; i++)
-				for (int j = 0; j < numVertices; j++)
-					adjMat2[i][j] = adjMat[i][j];
+				adjList2[i] = adjList[i];
 
 			// save the new structures
-			adjMat = adjMat2;
+			adjList = adjList2;
 			vertices = vertices2;
 			capacity = capacity2;
 		}
-		// add the new vertex and increase the number of vertices
-		vertices[numVertices++] = new Vertex<MyType>(label);
+		// add the new vertex at last position
+		vertices[numVertices] = new Vertex<MyType>(label);
+		// add a new list at last position
+		adjList[numVertices] = new ArrayList<Integer>();
+		// increase the number of vertices
+		numVertices++;
 	}
 
 	/**
@@ -107,41 +116,28 @@ public class Graph_Mat_UndUnw<MyType> implements InterfaceUnweightedGraph<MyType
 	 * @param index
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public void removeVertex(int index) {
 		if (index >= numVertices || index < 0)
 			return;
 
-		@SuppressWarnings("unchecked")
 		Vertex<MyType>[] vertices2 = new Vertex[capacity];
+		List<Integer>[] adjList2 = new List[capacity];
 
-		// copy vertices array over
+		// copy vertices array and adjacency list over
 		int i2 = 0;
 		for (int i = 0; i < numVertices; i++) {
 			// skip over index
 			if (i == index)
 				continue;
-			vertices2[i2++] = vertices[i];
-		}
-
-		// copy the adjacency matrix over
-		Integer[][] adjMat2 = new Integer[capacity][capacity];
-		i2 = 0;
-		int j2 = 0;
-		for (int i = 0; i < numVertices; i++) {
-			if (i == index)
-				continue;
-			for (int j = 0; j < numVertices; j++) {
-				if (j == index)
-					continue;
-				adjMat2[i2][j2++] = adjMat[i][j];
-			}
+			vertices2[i2] = vertices[i];
+			adjList2[i2] = adjList[i];
 			i2++;
-			j2 = 0;
 		}
 
 		numVertices--;
 		vertices = vertices2;
-		adjMat = adjMat2;
+		adjList = adjList2;
 	}
 
 	/**
@@ -153,17 +149,17 @@ public class Graph_Mat_UndUnw<MyType> implements InterfaceUnweightedGraph<MyType
 	 */
 	@Override
 	public void addEdge(int x, int y) {
-		// only add edge between two existing vertices, with positive weight
+		// only add edge between two existing vertices
 		if (x > numVertices || y > numVertices)
 			return;
 		// add the edge
-		adjMat[x][y] = 1;
-		adjMat[y][x] = 1;
+		adjList[x].add(y);
+		adjList[y].add(x);
 	}
 
 	/**
 	 * Remove the edge between the vertices x and y
-	 * O(1)
+	 * O(max(deg(x), deg(y)))
 	 * 
 	 * @param x
 	 * @param y
@@ -173,71 +169,57 @@ public class Graph_Mat_UndUnw<MyType> implements InterfaceUnweightedGraph<MyType
 		// only add edge between two existing vertices
 		if (x > numVertices || y > numVertices)
 			return;
-		// remove the edge
-		adjMat[x][y] = null;
-		adjMat[y][x] = null;
 
+		for (int i = 0; i < adjList[x].size(); i++)
+			if (adjList[x].get(i) == y) {
+				adjList[x].remove(i);
+				break;
+			}
+		for (int i = 0; i < adjList[y].size(); i++)
+			if (adjList[y].get(i) == x) {
+				adjList[y].remove(i);
+				break;
+			}
 	}
 
+	/**
+	 * Is (x,y) and (y,x) an edge
+	 * O(deg(x))
+	 * 
+	 * @param x
+	 * @param y
+	 * @return true if edge, false otherwise
+	 */
 	@Override
 	public boolean isEdge(int x, int y) {
 		// no edge between out of bounds vertices
 		if (x > numVertices || y > numVertices)
 			return false;
 		// enough to check one
-		if (adjMat[x][y] != null)
-			return true;
-		return false;
+		return adjList[x].contains(y);
 	}
 
 	/**
 	 * Find all vertices adjacent to x: all y s.t. (x,y) & (y,x) is an edge
-	 * O(n)
+	 * O(1)
 	 * 
 	 * @param x
 	 * @return a list of all vertices y that are adjacent to x
 	 */
 	@Override
 	public List<Integer> getNeighborVertices(int x) {
-		List<Integer> adjacentVert = new ArrayList<Integer>();
-		for (int i = 0; i < numVertices; i++)
-			if (adjMat[i][x] != null)
-				adjacentVert.add(i);
-		return adjacentVert;
+		return adjList[x];
 	}
 
 	/**
-	 * Show the adjacency matrix
-	 * (works best for numbers 0-9 or single character letters
+	 * Show the adjacency lists
 	 */
-	public void displayMatrix() {
-		// pad label row to allow label column
-		System.out.print("  | ");
-		// top row is labels
-		for (int i = 0; i < numVertices; i++)
-			System.out.print(vertices[i].label + " ");
-		for (int i = numVertices; i < capacity; i++)
-			System.out.print("- ");
-		System.out.println();
-		// print a line to separate
-		for (int i = 0; i < capacity; i++)
-			System.out.print("==");
-		System.out.println("===");
-
+	public void displayLists() {
 		// print the matrix and the label row
-		for (int i = 0; i < capacity; i++) {
-			for (int j = 0; j < capacity; j++) {
-				// first element is the label + separator
-				if (j == 0)
-					if (i < numVertices)
-						System.out.print(vertices[i].label + " | ");
-					else
-						System.out.print("- | ");
-				if (adjMat[i][j] == null)
-					System.out.print("- ");
-				else
-					System.out.print(adjMat[i][j] + " ");
-			}
+		for (int i = 0; i < numVertices; i++) {
+			System.out.print(i + ": ");
+			for (int j = 0; j < adjList[i].size(); j++)
+				System.out.print(adjList[i].get(j) + " ");
 			System.out.println();
 		}
 		System.out.println();

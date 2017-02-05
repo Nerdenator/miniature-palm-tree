@@ -17,9 +17,6 @@ public class ArraysAndArrayLists {
 		// find the position of 3 in the sorted array (returns 1)
 		int pos = Arrays.binarySearch(arr2, 3);
 
-		int[] b = Arrays.copyOf(arr, 5);
-		System.out.println((Arrays.asList(b)).toString());
-
 		// create an array list of capacity 100
 		ArrayList<Integer> arList = new ArrayList<Integer>(100);
 		// add 1, 10 to it

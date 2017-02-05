@@ -1,10 +1,14 @@
-package graphs_src;
+package g_weighted_src;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import g_unweighted_src.LstUndirectedUnweightedGraph;
+import graphs.Vertex;
+import graphs.InterfaceWeightedGraph;
+
 /**
- * Represent an undirected unweighted graph as an adjacency list and support
+ * Represent an unweighted undirected graph as an adjacency list and support
  * some basic operations
  * 
  * An adjacency list is an array of lists (or sometimes a list of lists). Each
@@ -16,49 +20,17 @@ import java.util.List;
  * @author adina
  *
  */
-public class Graph_Lst_UndUnw<MyType> implements InterfaceUnweightedGraph<MyType> {
-
-	// a list of vertices with associated labels
-	protected Vertex<MyType>[] vertices;
-	// number of vertices
-	protected int numVertices;
-
-	// an array of lists of vertices
-	// adjList[x] contains all vertices y s.t. (x,y) is an edge
-	protected List<Integer>[] adjList;
-	// maximum number of vertices before resize
-	protected int capacity;
+public class LstUndirectedWeightedGraph<MyType> extends LstUndirectedUnweightedGraph<MyType> implements InterfaceWeightedGraph<MyType> {
+	private List<Integer>[] adjListWeight;
 
 	@SuppressWarnings("unchecked")
-	public Graph_Lst_UndUnw(int capacity, Vertex<MyType>[] vertices) {
-		this.capacity = capacity;
-		this.numVertices = vertices.length;
+	public LstUndirectedWeightedGraph(int capacity, Vertex<MyType>[] vertices) {
+		super(capacity, vertices);
 
-		this.vertices = new Vertex[capacity];
+		// create the list of weights
+		adjListWeight = new List[capacity];
 		for (int i = 0; i < numVertices; i++)
-			this.vertices[i] = vertices[i];
-
-		adjList = new List[capacity];
-		for (int i = 0; i < numVertices; i++)
-			adjList[i] = new ArrayList<Integer>();
-	}
-
-	public int getCapacity() {
-		return capacity;
-	}
-
-	@Override
-	public int getNumVertices() {
-		return numVertices;
-	}
-
-	@Override
-	public MyType getVertexLabel(int index) {
-		// null if out of bounds
-		if (index >= numVertices || index < 0)
-			return null;
-		//  find label
-		return vertices[index].label;
+			adjListWeight[i] = new ArrayList<Integer>();
 	}
 
 	@Override
@@ -68,6 +40,7 @@ public class Graph_Lst_UndUnw<MyType> implements InterfaceUnweightedGraph<MyType
 			// increase capacity
 			int capacity2 = capacity * 3 / 2;
 			List<Integer>[] adjList2 = new List[capacity2];
+			List<Integer>[] adjListWeight2 = new List[capacity2];
 			Vertex<MyType>[] vertices2 = new Vertex[capacity2];
 
 			// copy vertices array over
@@ -78,31 +51,24 @@ public class Graph_Lst_UndUnw<MyType> implements InterfaceUnweightedGraph<MyType
 			for (int i = 0; i < numVertices; i++)
 				adjList2[i] = adjList[i];
 
+			// copy adjacency weight list over
+			for (int i = 0; i < numVertices - 1; i++)
+				adjListWeight2[i] = adjListWeight[i];
+
 			// save the new structures
 			adjList = adjList2;
 			vertices = vertices2;
 			capacity = capacity2;
+			adjListWeight = adjListWeight2;
 		}
 		// add the new vertex at last position
 		vertices[numVertices] = new Vertex<MyType>(label);
 		// add a new list at last position
 		adjList[numVertices] = new ArrayList<Integer>();
+		// add a new weight list at last position
+		adjListWeight[numVertices] = new ArrayList<Integer>();
 		// increase the number of vertices
 		numVertices++;
-	}
-
-	/**
-	 * Get the index of the vertex with label
-	 * O(n)
-	 * 
-	 * @param label
-	 */
-	@Override
-	public int getVertexIndex(MyType label) {
-		for (int i = 0; i < numVertices; i++)
-			if (vertices[i].label == label)
-				return i;
-		return -1;
 	}
 
 	/**
@@ -120,6 +86,7 @@ public class Graph_Lst_UndUnw<MyType> implements InterfaceUnweightedGraph<MyType
 
 		Vertex<MyType>[] vertices2 = new Vertex[capacity];
 		List<Integer>[] adjList2 = new List[capacity];
+		List<Integer>[] adjListWeight2 = new List[capacity];
 
 		// copy vertices array and adjacency list over
 		int i2 = 0;
@@ -129,29 +96,62 @@ public class Graph_Lst_UndUnw<MyType> implements InterfaceUnweightedGraph<MyType
 				continue;
 			vertices2[i2] = vertices[i];
 			adjList2[i2] = adjList[i];
+			adjListWeight2[i2] = adjListWeight[i];
 			i2++;
 		}
 
 		numVertices--;
 		vertices = vertices2;
 		adjList = adjList2;
+		adjListWeight = adjListWeight2;
 	}
 
 	/**
-	 * Add an edge between nodes x,y and y,x
+	 * Add an edge with weight 1 between nodes x,y and y,x if nothing was
+	 * specified
 	 * O(1)
 	 * 
 	 * @param x
 	 * @param y
+	 * @param w
 	 */
 	@Override
 	public void addEdge(int x, int y) {
-		// only add edge between two existing vertices
-		if (x > numVertices || y > numVertices)
+		addEdge(x, y, 1);
+	}
+
+	/**
+	 * Add an edge with weight w between nodes x,y and y,x
+	 * O(1)
+	 * 
+	 * @param x
+	 * @param y
+	 * @param w
+	 */
+	@Override
+	public void addEdge(int x, int y, int w) {
+		// only add edge between two existing vertices, with positive weight
+		if (w < 0)
 			return;
+		super.addEdge(x, y);
 		// add the edge
-		adjList[x].add(y);
-		adjList[y].add(x);
+		adjListWeight[x].add(w);
+		adjListWeight[y].add(w);
+	}
+
+	/**
+	 * Get the weight of the edge between x, y
+	 * 
+	 * @param x
+	 * @param y
+	 * @return the weight
+	 */
+	@Override
+	public int getWeight(int x, int y) {
+		int index = adjList[x].indexOf(y);
+		if (index == -1)
+			return -1;
+		return adjListWeight[x].get(index);
 	}
 
 	/**
@@ -170,79 +170,30 @@ public class Graph_Lst_UndUnw<MyType> implements InterfaceUnweightedGraph<MyType
 		for (int i = 0; i < adjList[x].size(); i++)
 			if (adjList[x].get(i) == y) {
 				adjList[x].remove(i);
+				adjListWeight[x].remove(i);
 				break;
 			}
 		for (int i = 0; i < adjList[y].size(); i++)
 			if (adjList[y].get(i) == x) {
 				adjList[y].remove(i);
+				adjListWeight[y].remove(i);
 				break;
 			}
-	}
 
-	/**
-	 * Is (x,y) and (y,x) an edge
-	 * O(deg(x))
-	 * 
-	 * @param x
-	 * @param y
-	 * @return true if edge, false otherwise
-	 */
-	@Override
-	public boolean isEdge(int x, int y) {
-		// no edge between out of bounds vertices
-		if (x > numVertices || y > numVertices)
-			return false;
-		// enough to check one
-		return adjList[x].contains(y);
-	}
-
-	/**
-	 * Find all vertices adjacent to x: all y s.t. (x,y) & (y,x) is an edge
-	 * O(1)
-	 * 
-	 * @param x
-	 * @return a list of all vertices y that are adjacent to x
-	 */
-	@Override
-	public List<Integer> getNeighborVertices(int x) {
-		return adjList[x];
 	}
 
 	/**
 	 * Show the adjacency lists
 	 */
+	@Override
 	public void displayLists() {
 		// print the matrix and the label row
 		for (int i = 0; i < numVertices; i++) {
 			System.out.print(i + ": ");
 			for (int j = 0; j < adjList[i].size(); j++)
-				System.out.print(adjList[i].get(j) + " ");
+				System.out.print(adjList[i].get(j) + "(" + adjListWeight[i].get(j) + ")" + " ");
 			System.out.println();
 		}
 		System.out.println();
-	}
-
-	@Override
-	public List<Integer> getInEdges(int x) {
-		return getNeighborVertices(x);
-	}
-
-	@Override
-	public List<Integer> getOutEdges(int x) {
-		return getNeighborVertices(x);
-	}
-
-	@Override
-	public void setVisited(int idx, boolean visited) {
-		if (idx < 0 || idx > numVertices)
-			return;
-		vertices[idx].wasVisited = visited;
-	}
-
-	@Override
-	public boolean isVisited(int idx) {
-		if (idx < 0 || idx > numVertices)
-			return true;
-		return vertices[idx].wasVisited;
 	}
 }

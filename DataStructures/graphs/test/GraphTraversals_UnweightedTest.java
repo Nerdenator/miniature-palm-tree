@@ -1,24 +1,24 @@
-package graphs_test;
+package test;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import graphs_src.GraphTraversals;
-import graphs_src.Graph_Lst_UndUnw;
-import graphs_src.Graph_Mat_UndUnw;
-import graphs_src.Vertex;
+import g_unweighted_src.LstUndirectedUnweightedGraph;
+import g_unweighted_src.MatUndirectedUnweightedGraph;
+import graphs.Vertex;
+import graphs_algorithms_src.GraphTraversals;
 
 public class GraphTraversals_UnweightedTest {
 
 	int numVert = 8;
 	int capacity = 10;
-	Graph_Mat_UndUnw<Integer> graphUndirectedAdjMat1;
-	Graph_Mat_UndUnw<Integer> graphUndirectedAdjMat2;
+	MatUndirectedUnweightedGraph<Integer> graphUndirectedAdjMat1;
+	MatUndirectedUnweightedGraph<Integer> graphUndirectedAdjMat2;
 
-	Graph_Lst_UndUnw<Integer> graphUndirectedAdjList1;
-	Graph_Lst_UndUnw<Integer> graphUndirectedAdjList2;
+	LstUndirectedUnweightedGraph<Integer> graphUndirectedAdjList1;
+	LstUndirectedUnweightedGraph<Integer> graphUndirectedAdjList2;
 	Vertex<Integer>[] vertices;
 
 	String DFS1, DFS2, BFS1, BFS2;
@@ -32,7 +32,7 @@ public class GraphTraversals_UnweightedTest {
 			vertices[v] = new Vertex<Integer>(v);
 
 		// GRAPH 1, represented using matrix
-		graphUndirectedAdjMat1 = new Graph_Mat_UndUnw<Integer>(capacity, vertices);
+		graphUndirectedAdjMat1 = new MatUndirectedUnweightedGraph<Integer>(capacity, vertices);
 		graphUndirectedAdjMat1.addEdge(0, 1);
 		graphUndirectedAdjMat1.addEdge(0, 2);
 		graphUndirectedAdjMat1.addEdge(0, 3);
@@ -42,7 +42,7 @@ public class GraphTraversals_UnweightedTest {
 		graphUndirectedAdjMat1.addEdge(4, 7);
 
 		// GRAPH 1, represented using list
-		graphUndirectedAdjList1 = new Graph_Lst_UndUnw<Integer>(capacity, vertices);
+		graphUndirectedAdjList1 = new LstUndirectedUnweightedGraph<Integer>(capacity, vertices);
 		graphUndirectedAdjList1.addEdge(0, 1);
 		graphUndirectedAdjList1.addEdge(0, 2);
 		graphUndirectedAdjList1.addEdge(0, 3);
@@ -58,7 +58,7 @@ public class GraphTraversals_UnweightedTest {
 		////////////////////////////////////////////
 
 		// GRAPH 2, represented using matrix
-		graphUndirectedAdjMat2 = new Graph_Mat_UndUnw<Integer>(capacity, vertices);
+		graphUndirectedAdjMat2 = new MatUndirectedUnweightedGraph<Integer>(capacity, vertices);
 		graphUndirectedAdjMat2.addEdge(0, 1);
 		graphUndirectedAdjMat2.addEdge(0, 2);
 		graphUndirectedAdjMat2.addEdge(0, 4);
@@ -70,7 +70,7 @@ public class GraphTraversals_UnweightedTest {
 		graphUndirectedAdjMat2.addEdge(6, 7);
 
 		// GRAPH 2, represented using list
-		graphUndirectedAdjList2 = new Graph_Lst_UndUnw<Integer>(capacity, vertices);
+		graphUndirectedAdjList2 = new LstUndirectedUnweightedGraph<Integer>(capacity, vertices);
 		graphUndirectedAdjList2.addEdge(0, 1);
 		graphUndirectedAdjList2.addEdge(0, 2);
 		graphUndirectedAdjList2.addEdge(0, 4);

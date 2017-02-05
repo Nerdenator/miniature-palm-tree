@@ -1,4 +1,8 @@
-package graphs_src;
+package g_weighted_src;
+
+import graphs.Vertex;
+import g_unweighted_src.MatUndirectedUnweightedGraph;
+import graphs.InterfaceWeightedGraph;
 
 /**
  * Represent an undirected weighted graph as an adjacency matrix and support
@@ -15,9 +19,9 @@ package graphs_src;
  * @author adina
  *
  */
-public class Graph_Mat_UndWei<MyType> extends Graph_Mat_UndUnw<MyType> implements InterfaceWeightedGraph<MyType> {
+public class MatUndirectedWeightedGraph<MyType> extends MatUndirectedUnweightedGraph<MyType> implements InterfaceWeightedGraph<MyType> {
 
-	public Graph_Mat_UndWei(int capacity, Vertex<MyType>[] vertices) {
+	public MatUndirectedWeightedGraph(int capacity, Vertex<MyType>[] vertices) {
 		super(capacity, vertices);
 	}
 
