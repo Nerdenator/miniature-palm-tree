@@ -7,12 +7,12 @@ import graph_util.InterfaceUnweightedGraph;
 import graph_util.Vertex;
 
 /**
- * Represent an unweighted undirected graph as an adjacency matrix and support
+ * Represent an undirected unweighted graph as an adjacency matrix and support
  * some basic operations
+ * 
  * Space: O(n^2)
  * 
  * @author adina
- *
  */
 public class UndirectedUnweightedGraphM<MyType> implements InterfaceUnweightedGraph<MyType> {
 

@@ -4,12 +4,12 @@ import graph_util.InterfaceWeightedGraph;
 import graph_util.Vertex;
 
 /**
- * Represent a directed unweighted graph as an adjacency matrix and support some
+ * Represent a directed weighted graph as an adjacency matrix and support some
  * basic operations
+ * 
  * Space: O(n^2)
  * 
  * @author adina
- * 
  */
 public class DirectedWeightedGraphM<MyType> extends DirectedUnweightedGraphM<MyType>
 		implements InterfaceWeightedGraph<MyType> {
