@@ -27,7 +27,7 @@ public class UndirectedWeightedGraphM<MyType> extends UndirectedUnweightedGraphM
 	 */
 	@Override
 	public void addEdge(int x, int y) {
-		// only add edge between two existing vertices, with positive weight
+		// only add edge between two existing vertices
 		if (x < 0 || y < 0 || x > numVertices || y > numVertices)
 			return;
 		// add the edge

@@ -8,10 +8,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import graph_matrix_src.DirectedWeightedGraphM;
+import graph_matrix_src.DirectedUnweightedGraphM;
 import graph_util.Vertex;
 
-public class DirectedWeightedGraphMTest {
+public class DirectedUnweightedGraphMTest {
 	// number of vertices
 	int numVert = 5;
 	// maximum number of vertices before resize
@@ -20,7 +20,7 @@ public class DirectedWeightedGraphMTest {
 	// vertices in graph
 	Vertex<Character>[] vert;
 
-	DirectedWeightedGraphM<Character> G;
+	DirectedUnweightedGraphM<Character> G;
 
 	@SuppressWarnings("unchecked")
 	@Before
@@ -32,12 +32,12 @@ public class DirectedWeightedGraphMTest {
 			vert[v] = new Vertex<Character>((char) (v + 'A'));
 
 		// undirected unweighted graph represented as an adjacency matrix
-		G = new DirectedWeightedGraphM<Character>(capacity, vert);
+		G = new DirectedUnweightedGraphM<Character>(capacity, vert);
 		G.addEdge(0, 1);
 		G.addEdge(1, 0);
 		G.addEdge(1, 2);
-		G.addEdge(0, 3, 3);
-		G.addEdge(3, 2, 2);
+		G.addEdge(0, 3);
+		G.addEdge(3, 2);
 	}
 
 	@Test
@@ -80,13 +80,31 @@ public class DirectedWeightedGraphMTest {
 		assertFalse(G.isEdge(-1, 3));
 		assertFalse(G.isEdge(1, 8));
 
-		// get the weights
-		assertEquals(0, G.getWeight(0, 1));
-		assertEquals(3, G.getWeight(0, 3));
-		assertEquals(2, G.getWeight(3, 2));
+		// remove edge 0,1
+		G.removeEdge(0, 1);
+		assertFalse(G.isEdge(0, 1));
+	}
 
-		// removed edge 0,1
+	@Test
+	public void testNeighborVertices() {
+		assertEquals("[1, 3]", G.getNeighborVertices(0).toString());
+		G.removeEdge(0, 1);
+		assertFalse(G.isEdge(0, 1));
+		G.removeEdge(1, 0);
 		assertFalse(G.isEdge(1, 0));
-		assertEquals(Integer.MAX_VALUE, G.getWeight(1, 0));
+		assertEquals("[3]", G.getNeighborVertices(0).toString());
+	}
+
+	@Test
+	public void testInOutEdges() {
+		assertEquals("[1]", G.getInEdges(0).toString());
+		assertEquals("[1, 3]", G.getInEdges(2).toString());
+		assertEquals("[0]", G.getInEdges(1).toString());
+		assertEquals("[]", G.getInEdges(4).toString());
+
+		assertEquals("[1, 3]", G.getOutEdges(0).toString());
+		assertEquals("[]", G.getOutEdges(2).toString());
+		assertEquals("[0, 2]", G.getOutEdges(1).toString());
+		assertEquals("[]", G.getOutEdges(4).toString());
 	}
 }
