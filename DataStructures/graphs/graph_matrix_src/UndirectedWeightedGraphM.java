@@ -7,6 +7,8 @@ import graph_util.Vertex;
  * Represent an undirected weighted graph as an adjacency matrix and support
  * some basic operations
  * 
+ * Array adjMat[x][y] = w, the weight of the edge between x & y, or null
+ * 
  * Space: O(n^2)
  * 
  * @author adina

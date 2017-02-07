@@ -10,6 +10,8 @@ import graph_util.Vertex;
  * Represent a directed unweighted graph as an adjacency matrix and support
  * some basic operations
  * 
+ * Array adjMat[x][y] = 1 if there is an edge between x & y
+ * 
  * Space: O(n^2)
  * 
  * @author adina
