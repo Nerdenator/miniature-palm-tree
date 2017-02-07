@@ -1,4 +1,4 @@
-package g_unweighted_test;
+package graph_matrix_test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -8,10 +8,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import g_unweighted_src.UndirectedUnweightedGraphMatrix;
-import graphs.Vertex;
+import graph_matrix_src.UndirectedUnweightedGraphM;
+import graph_util.Vertex;
 
-public class UndirectedUnweightedGraphMatrixTest {
+public class UndirectedUnweightedGraphMTest {
 	// number of vertices
 	int numVert = 5;
 	// maximum number of vertices before resize
@@ -20,7 +20,7 @@ public class UndirectedUnweightedGraphMatrixTest {
 	// vertices in graph
 	Vertex<Character>[] vert;
 
-	UndirectedUnweightedGraphMatrix<Character> G;
+	UndirectedUnweightedGraphM<Character> G;
 
 	@SuppressWarnings("unchecked")
 	@Before
@@ -32,7 +32,7 @@ public class UndirectedUnweightedGraphMatrixTest {
 			vert[v] = new Vertex<Character>((char) (v + 'A'));
 
 		// undirected unweighted graph represented as an adjacency matrix
-		G = new UndirectedUnweightedGraphMatrix<Character>(capacity, vert);
+		G = new UndirectedUnweightedGraphM<Character>(capacity, vert);
 		G.addEdge(0, 1);
 		G.addEdge(1, 2);
 		G.addEdge(0, 3);

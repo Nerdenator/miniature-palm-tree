@@ -1,10 +1,10 @@
-package g_unweighted_src;
+package graph_matrix_src;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import graphs.InterfaceUnweightedGraph;
-import graphs.Vertex;
+import graph_util.InterfaceUnweightedGraph;
+import graph_util.Vertex;
 
 /**
  * Represent an unweighted undirected graph as an adjacency matrix and support
@@ -14,7 +14,7 @@ import graphs.Vertex;
  * @author adina
  *
  */
-public class UndirectedUnweightedGraphMatrix<MyType> implements InterfaceUnweightedGraph<MyType> {
+public class UndirectedUnweightedGraphM<MyType> implements InterfaceUnweightedGraph<MyType> {
 
 	// maximum number of vertices before resize
 	protected int capacity;
@@ -35,7 +35,7 @@ public class UndirectedUnweightedGraphMatrix<MyType> implements InterfaceUnweigh
 	 * @param vertices
 	 */
 	@SuppressWarnings("unchecked")
-	public UndirectedUnweightedGraphMatrix(int capacity, Vertex<MyType>[] vertices) {
+	public UndirectedUnweightedGraphM(int capacity, Vertex<MyType>[] vertices) {
 		this.capacity = capacity;
 		adjMat = new Integer[capacity][capacity];
 		this.numVertices = vertices.length;
