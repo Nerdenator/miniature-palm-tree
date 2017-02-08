@@ -126,9 +126,7 @@ public class UndirectedUnweightedGraphM<MyType> implements InterfaceUnweightedGr
 	}
 
 	/**
-	 * Remove the vertex at index
-	 * O(n^2) since it causes recreation of vertices array and the adjacency
-	 * matrix
+	 * Remove the vertex at index in O(n^2)
 	 * 
 	 * @param index
 	 */
@@ -193,10 +191,11 @@ public class UndirectedUnweightedGraphM<MyType> implements InterfaceUnweightedGr
 	}
 
 	/**
-	 * Is there an edge between x & y and y & x?
+	 * Is there an edge between x & y and y & x in O(1)
 	 * 
 	 * @param x first vertex
 	 * @param y second vertex
+	 * @return true if edge, false otherwise
 	 */
 	@Override
 	public boolean isEdge(int x, int y) {
