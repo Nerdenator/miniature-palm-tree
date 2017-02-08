@@ -28,11 +28,21 @@ Implementation of data structures and algorithms
 | - [Java API](https://goo.gl/gt35qv) | - [Java API](https://goo.gl/yWLsPT) |
 
 ### Graphs
+- [Unweighted Graphs](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/InterfaceUnweightedGraph.java)
+- [Weighted Graphs](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/InterfaceWeightedGraph.java)
+- Graph [Vertex](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/Vertex.java) datastructure
+- Adjacency List [Item](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/Item.java) datastructure
+
 #### 1. Using Adjacency Matrices ([Notes]())
   - [Undirected Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/UndirectedUnweightedGraphM.java)
   - [Undirected Weighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/UndirectedWeightedGraphM.java)
   - [Directed Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/DirectedUnweightedGraphM.java)
   - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/DirectedWeightedGraphM.java)
   
-#### 2. Using Adjacency Lists
-#### 3. Using HashMaps
+#### 2. Using Adjacency Lists ([Notes]())
+  - [Undirected Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/UndirectedUnweightedGraphL.java)
+  - [Undirected Weighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/UndirectedWeightedGraphL.java)
+  - [Directed Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/DirectedUnweightedGraphL.java)
+  - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/DirectedWeightedGraphL.java)
+  
+#### 3. Using ???
