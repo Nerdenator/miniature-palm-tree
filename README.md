@@ -27,11 +27,15 @@ Implementation of data structures and algorithms
 | - [Unsorted](https://goo.gl/Ao7izn), [Sorted](https://goo.gl/R5vnUJ) | - [Theory](https://goo.gl/uVgZ0m) |
 | - [Java API](https://goo.gl/gt35qv) | - [Java API](https://goo.gl/yWLsPT) |
 
-### Graphs
+## Graphs
+
+### Graph Utils
 
 | [Unweighted Graphs Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/InterfaceUnweightedGraph.java) | Graph [Vertex](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/Vertex.java) datastructure |
 | --- | --- |
 | **[Weighted Graphs Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/InterfaceWeightedGraph.java)** | **Adjacency List [Item](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/Item.java) datastructure** |
+
+### Graph Representations
 
 | 1. Using Adjacency Matrices ([Notes]()) | 2. Using Adjacency Lists ([Notes]()) | 3. Using ??? |
 | --------------------------------------- | ------------------------------------ | ------------ |
@@ -40,3 +44,4 @@ Implementation of data structures and algorithms
 | - [Directed Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/DirectedUnweightedGraphM.java) | - [Directed Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/DirectedUnweightedGraphL.java) | - [Directed Unweighted Graph]() |
 | - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/DirectedWeightedGraphM.java) |  - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/DirectedWeightedGraphL.java) | - [Directed Weigthed Graph]() |
   
+### Graph Traversals
