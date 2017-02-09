@@ -45,3 +45,8 @@ Implementation of data structures and algorithms
 | - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/DirectedWeightedGraphM.java) |  - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/DirectedWeightedGraphL.java) | - [Directed Weigthed Graph]() |
   
 ### Graph Traversals
+
+| [Breadth-First Search](https://goo.gl/znyy7N) | [Depth-First Search](https://goo.gl/Qp1p8q) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graphs_algorithms_src/GraphTraversals.java) |
+|------------------- | -------------------------------- | -------------------------------- | 
+
+### Minimum Spanning Trees
