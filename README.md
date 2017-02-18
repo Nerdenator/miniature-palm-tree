@@ -27,6 +27,17 @@ Implementation of data structures and algorithms
 | - [Unsorted](https://goo.gl/Ao7izn), [Sorted](https://goo.gl/R5vnUJ) | - [Theory](https://goo.gl/uVgZ0m) |
 | - [Java API](https://goo.gl/gt35qv) | - [Java API](https://goo.gl/yWLsPT) |
 
+## Binary Search Trees (BST)
+
+### BST Utils
+
+| [Binary Trees Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/InterfaceBinaryTree.java) | Tree [Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/Node.java) datastructure |
+| --- | --- |
+
+### Binary Search Tree 
+- [Implementation](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinarySearchTree.java)
+- [Traversals](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinaryTreeTraversals.java) (pre-order, in-order, post-order, level-order)
+
 ## Graphs
 
 ### Graph Utils
