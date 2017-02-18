@@ -284,12 +284,11 @@ public class BinaryTreeTraversals {
 				queue.add(cur.left);
 				queue.add(cur.right);
 				numNodesNextLevel += 2;
-			} else
-				sb.append("# ");
+			}
 
 			// if already printed all the nodes on this level, advance to the
 			// next level
-			if (numNodesCurLevel == 0) {
+			if (numNodesCurLevel == 0 && numNodesNextLevel > 0) {
 				sb.append("| ");
 				numNodesCurLevel = numNodesNextLevel;
 				numNodesNextLevel = 0;

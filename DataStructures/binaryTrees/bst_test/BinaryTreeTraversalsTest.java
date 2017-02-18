@@ -13,7 +13,7 @@ public class BinaryTreeTraversalsTest {
 	String pre = "[ 10 5 4 1 3 8 15 12 17 16 20 22 ]";
 	String post = "[ 3 1 4 8 5 12 16 22 20 17 15 10 ]";
 	String in = "[ 1 3 4 5 8 10 12 15 16 17 20 22 ]";
-	String lev = "[ 10 | 5 15 | 4 8 12 17 | 1 # # # # # 16 20 | # 3 # # # 22 | # # # # | ]";
+	String lev = "[ 10 | 5 15 | 4 8 12 17 | 1 16 20 | 3 22 | ]";
 
 	@Before
 	public void setUp() {

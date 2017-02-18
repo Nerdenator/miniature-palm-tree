@@ -53,6 +53,8 @@ public class BinarySearchTree extends BinaryTreeInsertAny<Integer> implements In
 	/**
 	 * Set the interface insert to be the iterative insert
 	 * O(log n) average, O(n) worst; space O(1)
+	 * 
+	 * @param data: data to insert
 	 */
 	@Override
 	public void insert(Integer data) {
@@ -65,7 +67,7 @@ public class BinarySearchTree extends BinaryTreeInsertAny<Integer> implements In
 	 * and right if data > cur
 	 * O(log n) average, O(n) worst; space O(1)
 	 * 
-	 * @param data
+	 * @param data: data to insert
 	 */
 	public void insertIterative(Integer data) {
 		// add a new root with data
