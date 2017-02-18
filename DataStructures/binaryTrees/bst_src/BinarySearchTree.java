@@ -1,6 +1,6 @@
 package bst_src;
 
-import binaryTree_src.BinaryTreeInsertAny;
+import binaryTree_src.BinaryTreeInsertRandomDirection;
 import binaryTree_util.InterfaceBinaryTree;
 import binaryTree_util.Node;
 
@@ -11,7 +11,7 @@ import binaryTree_util.Node;
  * and the right subtree is always > parent
  *
  */
-public class BinarySearchTree extends BinaryTreeInsertAny<Integer> implements InterfaceBinaryTree<Integer> {
+public class BinarySearchTree extends BinaryTreeInsertRandomDirection<Integer> implements InterfaceBinaryTree<Integer> {
 	/**
 	 * Empty constructor
 	 */
