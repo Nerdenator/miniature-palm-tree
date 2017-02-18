@@ -35,8 +35,8 @@ Implementation of data structures and algorithms
 | --- | --- |
 
 ### Binary Search Tree 
-- [Implementation](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinarySearchTree.java)
-- [Traversals](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinaryTreeTraversals.java) (pre-order, in-order, post-order, level-order)
+- [BST Implementation](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinarySearchTree.java), [Notes](https://goo.gl/NYBz1g)
+- [Binary Tree Traversals](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinaryTreeTraversals.java) (pre-order, in-order, post-order, level-order), [Notes](https://goo.gl/cgOg2M)
 
 ## Graphs
 
