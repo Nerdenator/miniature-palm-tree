@@ -9,7 +9,6 @@ import binaryTree_util.Node;
 
 public class BinaryTreeInsertRandomDirectionTest {
 	BinaryTreeInsertRandomDirection<Integer> t;
-	int[] arr = new int[] { 10, 15, 5, 4, 12, 8, 17, 1, 3, 20, 22, 16 };
 
 	@Before
 	public void setUp() throws Exception {

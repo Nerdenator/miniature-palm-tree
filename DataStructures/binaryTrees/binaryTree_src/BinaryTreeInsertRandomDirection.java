@@ -271,7 +271,8 @@ public class BinaryTreeInsertRandomDirection<MyType> implements InterfaceBinaryT
 	public void displayTree() {
 		Stack<Node<MyType>> globalStack = new Stack<>();
 		globalStack.push(root);
-		int nBlanks = 32;
+		int nBlanks = 64;
+		int nDots = nBlanks;
 		boolean isRowEmpty = false;
 		while (!isRowEmpty) {
 			Stack<Node<MyType>> localStack = new Stack<>();
@@ -299,7 +300,9 @@ public class BinaryTreeInsertRandomDirection<MyType> implements InterfaceBinaryT
 			while (localStack.isEmpty() == false)
 				globalStack.push(localStack.pop());
 		} // end while isRowEmpty is false
-		System.out.println("......................................................................\n");
+		for (int k = 0; k < nDots; k++)
+			System.out.print("..");
+		System.out.println("\n");
 	} // end displayTree()
 
 }
