@@ -31,9 +31,9 @@ Implementation of data structures and algorithms
 
 | [Stacks](https://goo.gl/FvxQpz) | [Queues](https://goo.gl/ui1H6w) |
 | ------ | -------------- |
-| [Stack Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/InterfaceStack.java)   | [Queue Interface]()|
-| [Stack with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackArray.java)   | [Queue with Array]()|
-| [Stack with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackList.java)   | [Queue with Linked List]()|
+| [Stack Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/InterfaceStack.java)   | [Queue Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/InterfaceQueue.java)|
+| [Stack with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackArray.java)   | [Queue with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueArray.java)|
+| [Stack with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackList.java)   | [Queue with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueList.java)|
 
 
 ## Binary Search Trees (BST)
