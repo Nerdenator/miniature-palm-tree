@@ -35,25 +35,38 @@ Implementation of data structures and algorithms
 | [Stack with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackArray.java)   | [Queue with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueArray.java)|
 | [Stack with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackList.java)   | [Queue with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueList.java)|
 
+## Liked Lists
 
-## Binary Search Trees (BST)
+- Linked List Utils
 
-### BST Utils
-
-| [Binary Trees Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/InterfaceBinaryTree.java) | Tree [Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/Node.java) datastructure |
+| [Linked List Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_util/InterfaceLinkedList.java) | [Linked List Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_util/Node.java) |
 | --- | --- |
 
+- Linked Lists
+
+| [Notes](https://goo.gl/X7k6Ra) | [Singly Linked](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_src/SinglyLinkedList.java) | [Double-Ended](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_src/DoubleEndedList.java) | [Doubly-Linked](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_src/DoublyLinkedList.java) |
+| --- | --- | --- | --- |
+
+## Binary Trees 
+
 ### Binary Trees
+
+- Binary Tree Utils
+
+| [Binary Trees Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/InterfaceBinaryTree.java) | [Binary Tree Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/Node.java) |
+| --- | --- |
+
+- Binary Trees
 
 | [Notes](https://goo.gl/JD4IFW) | [Random Insert Direction](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_src/BinaryTreeInsertRandomDirection.java) |
 | --------- | --------------------------- |
 
-### Binary Tree Traversals
+- Binary Tree Traversals
 
 | [Notes](https://goo.gl/cgOg2M) | [Binary Tree Traversals](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinaryTreeTraversals.java) (pre-order, in-order, post-order, level-order) |
 | --------- | --------------------------- |
 
-### Binary Search Trees 
+### Binary Search Trees (BST)
 
 | [Notes](https://goo.gl/4E91pF) | [BST Implementation](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinarySearchTree.java) |
 | --------- | --------------------------- |
@@ -61,13 +74,13 @@ Implementation of data structures and algorithms
 
 ## Graphs
 
-### Graph Utils
+- Graph Utils
 
-| [Unweighted Graphs Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/InterfaceUnweightedGraph.java) | Graph [Vertex](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/Vertex.java) datastructure |
+| [Unweighted Graphs Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/InterfaceUnweightedGraph.java) | [Graph Vertex](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/Vertex.java) |
 | --- | --- |
-| **[Weighted Graphs Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/InterfaceWeightedGraph.java)** | **Adjacency List [Item](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/Item.java) datastructure** |
+| **[Weighted Graphs Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/InterfaceWeightedGraph.java)** | **[Adjacency List Item](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_util/Item.java)** |
 
-### Graph Representations
+- Graph Representations
 
 | 1. Using Adjacency Matrices ([Notes]()) | 2. Using Adjacency Lists ([Notes]()) | 
 | --------------------------------------- | ------------------------------------ | 
@@ -76,7 +89,7 @@ Implementation of data structures and algorithms
 | - [Directed Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/DirectedUnweightedGraphM.java) | - [Directed Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/DirectedUnweightedGraphL.java) | 
 | - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/DirectedWeightedGraphM.java) |  - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/DirectedWeightedGraphL.java) | 
   
-### Graph Traversals
+- Graph Traversals
 
 | [Breadth-First Search](https://goo.gl/znyy7N) | [Depth-First Search](https://goo.gl/Qp1p8q) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graphs_algorithms_src/GraphTraversals.java) |
 |------------------- | -------------------------------- | -------------------------------- | 
