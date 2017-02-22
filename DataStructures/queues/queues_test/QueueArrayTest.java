@@ -3,8 +3,8 @@ package queues_test;
 import org.junit.Assert;
 import org.junit.Test;
 
-import queues_src.QueueArray;
 import queues_src.InterfaceQueue;
+import queues_src.QueueArray;
 
 public class QueueArrayTest {
 	InterfaceQueue<Integer> queue = new QueueArray<>(4);
@@ -63,10 +63,10 @@ public class QueueArrayTest {
 		queue.add(30);
 
 		///
-		Assert.assertEquals(new Integer(10), queue.remove());
-		Assert.assertEquals(new Integer(20), queue.remove());
-		Assert.assertEquals(new Integer(40), queue.remove());
-		Assert.assertEquals(new Integer(30), queue.remove());
+		Assert.assertEquals((Integer) 10, queue.remove());
+		Assert.assertEquals((Integer) 20, queue.remove());
+		Assert.assertEquals((Integer) 40, queue.remove());
+		Assert.assertEquals((Integer) 30, queue.remove());
 	}
 
 	@Test
@@ -87,8 +87,8 @@ public class QueueArrayTest {
 		queue.add(30);
 
 		///
-		Assert.assertEquals(new Integer(10), queue.peek());
-		Assert.assertEquals(new Integer(10), queue.peek());
+		Assert.assertEquals((Integer) 10, queue.peek());
+		Assert.assertEquals((Integer) 10, queue.peek());
 	}
 
 	@Test

@@ -51,10 +51,10 @@ public class QueueListTest {
 		queue.add(30);
 
 		///
-		Assert.assertEquals(new Integer(10), queue.remove());
-		Assert.assertEquals(new Integer(20), queue.remove());
-		Assert.assertEquals(new Integer(40), queue.remove());
-		Assert.assertEquals(new Integer(30), queue.remove());
+		Assert.assertEquals((Integer) 10, queue.remove());
+		Assert.assertEquals((Integer) 20, queue.remove());
+		Assert.assertEquals((Integer) 40, queue.remove());
+		Assert.assertEquals((Integer) 30, queue.remove());
 	}
 
 	@Test
@@ -75,8 +75,8 @@ public class QueueListTest {
 		queue.add(30);
 
 		///
-		Assert.assertEquals(new Integer(10), queue.peek());
-		Assert.assertEquals(new Integer(10), queue.peek());
+		Assert.assertEquals((Integer) 10, queue.peek());
+		Assert.assertEquals((Integer) 10, queue.peek());
 	}
 
 	@Test

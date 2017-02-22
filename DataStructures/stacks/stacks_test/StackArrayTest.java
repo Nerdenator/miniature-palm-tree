@@ -51,10 +51,10 @@ public class StackArrayTest {
 		stack.push(30);
 
 		///
-		Assert.assertEquals(new Integer(30), stack.pop());
-		Assert.assertEquals(new Integer(40), stack.pop());
-		Assert.assertEquals(new Integer(20), stack.pop());
-		Assert.assertEquals(new Integer(10), stack.pop());
+		Assert.assertEquals((Integer) 30, stack.pop());
+		Assert.assertEquals((Integer) 40, stack.pop());
+		Assert.assertEquals((Integer) 20, stack.pop());
+		Assert.assertEquals((Integer) 10, stack.pop());
 	}
 
 	@Test
@@ -75,8 +75,8 @@ public class StackArrayTest {
 		stack.push(30);
 
 		///
-		Assert.assertEquals(new Integer(30), stack.peek());
-		Assert.assertEquals(new Integer(30), stack.peek());
+		Assert.assertEquals((Integer) 30, stack.peek());
+		Assert.assertEquals((Integer) 30, stack.peek());
 	}
 
 	@Test
