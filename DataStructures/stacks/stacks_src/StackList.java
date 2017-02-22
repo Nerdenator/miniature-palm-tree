@@ -41,8 +41,7 @@ public class StackList<MyType> implements InterfaceStack<MyType> {
 	}
 
 	/**
-	 * Return the element from the top of the stack without removing it from the
-	 * list
+	 * Show the top (last) element without removing it
 	 * 
 	 * @return the item at the top of the stack
 	 */
@@ -59,7 +58,7 @@ public class StackList<MyType> implements InterfaceStack<MyType> {
 	/**
 	 * Is the stack empty
 	 * 
-	 * @return true if list is empty, fals otherwise
+	 * @return true if list is empty, false otherwise
 	 */
 	@Override
 	public boolean isEmpty() {
