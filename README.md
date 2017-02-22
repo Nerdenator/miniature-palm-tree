@@ -43,9 +43,21 @@ Implementation of data structures and algorithms
 | [Binary Trees Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/InterfaceBinaryTree.java) | Tree [Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/Node.java) datastructure |
 | --- | --- |
 
-### Binary Search Tree 
-- [BST Implementation](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinarySearchTree.java), [Notes](https://goo.gl/NYBz1g)
-- [Binary Tree Traversals](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinaryTreeTraversals.java) (pre-order, in-order, post-order, level-order), [Notes](https://goo.gl/cgOg2M)
+### Binary Trees
+
+| [Notes](https://goo.gl/JD4IFW) | [Random Insert Direction](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_src/BinaryTreeInsertRandomDirection.java) |
+| --------- | --------------------------- |
+
+### Binary Tree Traversals
+
+| [Notes](https://goo.gl/cgOg2M) | [Binary Tree Traversals(https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinaryTreeTraversals.java) (pre-order, in-order, post-order, level-order) |
+| --------- | --------------------------- |
+
+### Binary Search Trees 
+
+| [Notes](https://goo.gl/4E91pF) | [BST Implementation](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinarySearchTree.java) |
+| --------- | --------------------------- |
+
 
 ## Graphs
 
@@ -57,12 +69,12 @@ Implementation of data structures and algorithms
 
 ### Graph Representations
 
-| 1. Using Adjacency Matrices ([Notes]()) | 2. Using Adjacency Lists ([Notes]()) | 3. Using ??? |
-| --------------------------------------- | ------------------------------------ | ------------ |
-| - [Undirected Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/UndirectedUnweightedGraphM.java) | - [Undirected Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/UndirectedUnweightedGraphL.java) | - [Undirected Unweighted Graph]() |
-| - [Undirected Weighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/UndirectedWeightedGraphM.java) | - [Undirected Weighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/UndirectedWeightedGraphL.java) | - [Undirected Weighted Graph]() |
-| - [Directed Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/DirectedUnweightedGraphM.java) | - [Directed Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/DirectedUnweightedGraphL.java) | - [Directed Unweighted Graph]() |
-| - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/DirectedWeightedGraphM.java) |  - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/DirectedWeightedGraphL.java) | - [Directed Weigthed Graph]() |
+| 1. Using Adjacency Matrices ([Notes]()) | 2. Using Adjacency Lists ([Notes]()) | 
+| --------------------------------------- | ------------------------------------ | 
+| - [Undirected Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/UndirectedUnweightedGraphM.java) | - [Undirected Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/UndirectedUnweightedGraphL.java) | 
+| - [Undirected Weighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/UndirectedWeightedGraphM.java) | - [Undirected Weighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/UndirectedWeightedGraphL.java) | 
+| - [Directed Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/DirectedUnweightedGraphM.java) | - [Directed Unweighted Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/DirectedUnweightedGraphL.java) | 
+| - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_matrix_src/DirectedWeightedGraphM.java) |  - [Directed Weigthed Graph](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graph_list_src/DirectedWeightedGraphL.java) | 
   
 ### Graph Traversals
 
