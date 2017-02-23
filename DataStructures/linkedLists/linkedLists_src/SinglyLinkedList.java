@@ -16,7 +16,7 @@ import linkedLists_util.Node;
  */
 public class SinglyLinkedList<MyType> implements InterfaceLinkedList<MyType> {
 	// Node pointing to the beginning of the list
-	protected Node<MyType> head;
+	public Node<MyType> head;
 
 	/**
 	 * Empty constructor
