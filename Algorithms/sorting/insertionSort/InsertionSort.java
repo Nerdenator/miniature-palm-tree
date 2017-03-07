@@ -12,24 +12,24 @@ package insertionSort;
 
 public class InsertionSort {
 	/**
-	 * Start with empty sorted list and insert items in the appropriate place
+	 * Start with empty sorted array and insert items in the appropriate place
 	 * -> insert to the left of the current index
 	 * 
-	 * @param A array to sort
+	 * @param array - array to sort
 	 */
-	public static void sort(int[] A) {
-		for (int i = 1; i < A.length; i++) {
-			// want to insert val = A[i] in the correct position between 0 and
-			// i-1
-			int val = A[i];
+	public static void sort(int[] array) {
+		for (int i = 1; i < array.length; i++) {
+			// want to insert val = array[i] in the
+			// correct position between 0 and i-1
+			int val = array[i];
 			// move all greater elements to the right
 			int j = i - 1;
-			while (j >= 0 && A[j] > val) {
-				A[j + 1] = A[j];
+			while (j >= 0 && array[j] > val) {
+				array[j + 1] = array[j];
 				j--;
 			}
 			// move val to the correct identified spot
-			A[j + 1] = val;
+			array[j + 1] = val;
 		}
 	}
 }

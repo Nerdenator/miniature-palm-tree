@@ -89,6 +89,5 @@ public class BubbleSort {
 			// nothing past the last swap needs to move
 			n = newn;
 		}
-
 	}
 }

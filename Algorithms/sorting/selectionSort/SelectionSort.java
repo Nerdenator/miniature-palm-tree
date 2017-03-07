@@ -12,32 +12,33 @@ package selectionSort;
 public class SelectionSort {
 
 	/**
-	 * Sort the array in O(n^2) time
+	 * Sort the array in O(n^2) time by swapping the minimum element to the
+	 * right with current element
 	 * 
-	 * @param A the array to be sorted
+	 * @param array - the array to be sorted
 	 */
-	public static void sort(int[] A) {
+	public static void sort(int[] array) {
+		// keep track of the minimum value and the index of it
 		int minVal;
 		int minInd;
 
-		for (int j = 0; j < A.length - 1; j++) {
+		for (int j = 0; j < array.length - 1; j++) {
 			// find the minimum value and index in the remainder of the array
 			// (to the right of j)
-			minVal = A[j];
+			minVal = array[j];
 			minInd = j;
-			for (int i = j + 1; i < A.length; i++) {
+			for (int i = j + 1; i < array.length; i++) {
 				// num_comparisons = (n-1) + (n-1) +..+ 1 = n * (n-1) / 2
-				if (minVal > A[i]) {
-					minVal = A[i];
+				if (minVal > array[i]) {
+					minVal = array[i];
 					minInd = i;
 				}
 			}
 			// move the minimum to the current position
 			// num_swaps < n
-			int aux = A[minInd];
-			A[minInd] = A[j];
-			A[j] = aux;
+			int aux = array[minInd];
+			array[minInd] = array[j];
+			array[j] = aux;
 		}
 	}
-
 }
