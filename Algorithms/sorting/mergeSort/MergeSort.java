@@ -12,23 +12,24 @@ package mergeSort;
  */
 public class MergeSort {
 	/**
+	 * Public method to call with only array parameter
 	 * Total runtime: O(n log n)
 	 * 
-	 * @param A the array to sort
+	 * @param array - the array to sort
 	 */
-	public static void sort(int[] A) {
-		sort(A, 0, A.length - 1);
+	public static void sort(int[] array) {
+		sort(array, 0, array.length - 1);
 	}
 
 	/**
 	 * Recursive merge sort method that runs in O(n log n),
 	 * including the merge method
 	 * 
-	 * @param A the array to sort
-	 * @param low the index to start from
-	 * @param high the index to end at
+	 * @param array - the array to sort
+	 * @param low - the index to start at
+	 * @param high - the index to end at
 	 */
-	private static void sort(int[] A, int low, int high) {
+	private static void sort(int[] array, int low, int high) {
 		// should ideally stop in the middle
 		if (low >= high)
 			return;
@@ -37,25 +38,25 @@ public class MergeSort {
 		int mid = (high - low) / 2 + low;// (low + high) / 2;
 
 		// sort first half
-		sort(A, low, mid);
+		sort(array, low, mid);
 
 		// sort second half
-		sort(A, mid + 1, high);
+		sort(array, mid + 1, high);
 
 		// merge the two halves
-		merge(A, low, mid, high);
+		merge(array, low, mid, high);
 	}
 
 	/**
-	 * Merge sorted arrays A[low ... mid] and A[mid+1 ... high] so that they're
-	 * sorted in O(n) time and O(n) space
+	 * Merge sorted arrays array[low ... mid] and array[mid+1 ... high] so that
+	 * the new array is sorted. Takes O(n) time and O(n) space
 	 * 
-	 * @param A the array to sort
-	 * @param low lowest index
-	 * @param mid middle index
-	 * @param high highest index
+	 * @param array - the array to sort
+	 * @param low - the index to start at
+	 * @param mid - middle index
+	 * @param high - the index to end at
 	 */
-	private static void merge(int[] A, int low, int mid, int high) {
+	private static void merge(int[] array, int low, int mid, int high) {
 		// index that goes through first array partition
 		int idx1 = low;
 		// index that goes through second array partition
@@ -63,38 +64,38 @@ public class MergeSort {
 		// index that goes through the entire array to get it in order
 		int idx = low;
 
-		// copy the array so that past changes in place don't affect future
-		// changes
-		int[] copyA = A.clone();
+		// copy the array so that past changes in place
+		// don't affect future changes
+		int[] copyArray = array.clone();
 
-		// sort A given copyA and the indices
+		// sort array given copyArray and the indices
 		// iterate in parallel until we run out of elements in
-		// either A[low ... mid] or A[mid+1 ... high]
+		// either array[low ... mid] or array[mid+1 ... high]
 		while (idx1 <= mid && idx2 <= high) {
 			// if the smaller value is in first half
-			if (copyA[idx1] <= copyA[idx2]) {
-				A[idx] = copyA[idx1];
+			if (copyArray[idx1] <= copyArray[idx2]) {
+				array[idx] = copyArray[idx1];
 				idx1++;
 			}
 			// if the smaller value is in second half
 			else {
-				A[idx] = copyA[idx2];
+				array[idx] = copyArray[idx2];
 				idx2++;
 			}
-			// fill out next element
+			// fill out next element of array
 			idx++;
 		}
 
-		// copy what's left over from A[low ... mid]
+		// copy what's left over from array[low ... mid]
 		while (idx1 <= mid) {
-			A[idx] = copyA[idx1];
+			array[idx] = copyArray[idx1];
 			idx1++;
 			idx++;
 		}
 
-		// copy what's left over from A[mid+1 ... high]
+		// copy what's left over from array[mid+1 ... high]
 		while (idx2 <= high) {
-			A[idx] = copyA[idx2];
+			array[idx] = copyArray[idx2];
 			idx2++;
 			idx++;
 		}
