@@ -5,26 +5,23 @@ Implementation of data structures and algorithms
 
 ## Searching 
 
-- Binary Search
+- Binary Search: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=193012893070714&h2=Binary-Search) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/searching/binarySearch/BinarySearch.java)
 
 ## Sorting
 
-- Bubble Sort
-- Insertion Sort
-- Selection Sort
-- [Merge Sort](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=915600641348943&h2=Merge-sort)
+- Bubble Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=967968668100180&h2=Bubble-Sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/bubbleSort/BubbleSort.java)
+- Insertion Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=486623696708152&h2=Insertion-Sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/insertionSort/InsertionSort.java)
+- Selection Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=132599071920303&h2=Selection-Sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/selectionSort/SelectionSort.java)
+- Merge Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=009803644887312&h2=Merge-sort) | [Code - Arrays](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/mergeSort/MergeSort.java) | [Code - Linked Lists](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedListsProblems_src/MergeSortLinkedList.java)
 
 # Data Structures
 
-| Arrays | Dynamic Arrays |
-| ------ | -------------- |
-|  | - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/dynamicArrays/dynamicArrays/DynamicArray.java) |
-| - [Unsorted](https://goo.gl/Ao7izn), [Sorted](https://goo.gl/R5vnUJ) | - [Theory](https://goo.gl/uVgZ0m) |
-| - [Java API](https://goo.gl/gt35qv) | - [Java API](https://goo.gl/yWLsPT) |
+- Arrays: [Notes]()
+- Dynamic Arrays: [Notes]() | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/dynamicArrays/dynamicArrays/DynamicArray.java)
 
 ## Stacks and Queues
 
-| [Stacks](https://goo.gl/FvxQpz) | [Queues](https://goo.gl/ui1H6w) |
+| Stacks: [Notes]() | Queues: [Notes](https://goo.gl/ui1H6w) |
 | ------ | -------------- |
 | [Stack Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/InterfaceStack.java)   | [Queue Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/InterfaceQueue.java)|
 | [Stack with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackArray.java)   | [Queue with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueArray.java)|
