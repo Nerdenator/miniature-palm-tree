@@ -12,32 +12,25 @@ Implementation of data structures and algorithms
 - Bubble Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=967968668100180&h2=Bubble-Sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/bubbleSort/BubbleSort.java)
 - Insertion Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=486623696708152&h2=Insertion-Sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/insertionSort/InsertionSort.java)
 - Selection Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=132599071920303&h2=Selection-Sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/selectionSort/SelectionSort.java)
-- Merge Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=009803644887312&h2=Merge-sort) | [Code - Arrays](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/mergeSort/MergeSort.java) | [Code - Linked Lists](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedListsProblems_src/MergeSortLinkedList.java)
+- Merge Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=009803644887312&h2=Merge-sort) | [Code - for Arrays](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/mergeSort/MergeSort.java) | [Code - for Linked Lists](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedListsProblems_src/MergeSortLinkedList.java)
 
 # Data Structures
+
+## Arrays and Dynamic Arrays
 
 - Arrays: [Notes]()
 - Dynamic Arrays: [Notes]() | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/dynamicArrays/dynamicArrays/DynamicArray.java)
 
 ## Stacks and Queues
 
-| Stacks: [Notes]() | Queues: [Notes](https://goo.gl/ui1H6w) |
-| ------ | -------------- |
-| [Stack Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/InterfaceStack.java)   | [Queue Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/InterfaceQueue.java)|
-| [Stack with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackArray.java)   | [Queue with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueArray.java)|
-| [Stack with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackList.java)   | [Queue with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueList.java)|
+- Stacks: [Notes]() | [Code - Stack Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/InterfaceStack.java) | [Code - with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackArray.java) | [Code - with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackList.java)
+- Queues: [Notes](https://goo.gl/ui1H6w) | [Code - Queue Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/InterfaceQueue.java) | [Code - with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueArray.java) | [Code - with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueList.java)
 
 ## Liked Lists
 
-- Linked List Utils
-
-| [Linked List Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_util/InterfaceLinkedList.java) | [Linked List Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_util/Node.java) |
-| --- | --- |
-
-- Linked Lists
-
-| [Notes](https://goo.gl/X7k6Ra) | [Singly Linked](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_src/SinglyLinkedList.java) | [Double-Ended](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_src/DoubleEndedList.java) | [Doubly-Linked](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_src/DoublyLinkedList.java) |
-| --- | --- | --- | --- |
+- [Notes]() 
+- [Code - Linked List Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_util/InterfaceLinkedList.java) | [Code - Linked List Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_util/Node.java) 
+- [Code - Singly Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_src/SinglyLinkedList.java) | [Code - Double-Ended List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_src/DoubleEndedList.java) | [Code - Doubly-Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedLists_src/DoublyLinkedList.java) 
 
 ## Binary Trees 
 
