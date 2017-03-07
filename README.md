@@ -12,7 +12,7 @@ Implementation of data structures and algorithms
 - Bubble Sort
 - Insertion Sort
 - Selection Sort
-- (Merge Sort)[https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=915600641348943&h2=Merge-sort]
+- [Merge Sort](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=915600641348943&h2=Merge-sort)
 
 # Data Structures
 
