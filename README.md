@@ -5,19 +5,14 @@ Implementation of data structures and algorithms
 
 ## Searching 
 
-| Binary Search |
-| ------------- |
-| - O(log n)    |
-| - [Notes](https://goo.gl/fhaqYe) |
-| - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/searching/binarySearch/BinarySearch.java) |
+- Binary Search
 
 ## Sorting
 
-| Bubble Sort | Insertion Sort | Selection Sort | Merge Sort   |
-| ----------- | -------------- | -------------- | ------------ |
-| - O(n^2)    | - O(n^2)       | - O(n^2)       | - O(n log n) |
-| - [Notes](https://goo.gl/Enr70l) | - [Notes](https://goo.gl/4fCZo3) | - [Notes](https://goo.gl/88VuSz) | - [Notes](https://goo.gl/3wvsqe) |
-| - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/bubbleSort/BubbleSort.java)  | - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/insertionSort/InsertionSort.java)|    - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/selectionSort/SelectionSort.java) | - [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/mergeSort/MergeSort.java) |
+- Bubble Sort
+- Insertion Sort
+- Selection Sort
+- (Merge Sort)[https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=915600641348943&h2=Merge-sort]
 
 # Data Structures
 
