@@ -5,6 +5,14 @@ import java.util.Stack;
 import binaryTree_util.InterfaceBinaryTree;
 import binaryTree_util.Node;
 
+/**
+ * Use a random number to decide which direction to go from a given node.
+ * Note: This could generate a very unbalanced tree.
+ * 
+ * @author adina
+ *
+ * @param <MyType>
+ */
 public class BinaryTreeInsertRandomDirection<MyType> implements InterfaceBinaryTree<MyType> {
 	// the root node of the tree
 	public Node<MyType> root;
@@ -15,9 +23,7 @@ public class BinaryTreeInsertRandomDirection<MyType> implements InterfaceBinaryT
 	}
 
 	/**
-	 * This insert uses a random number to decide which
-	 * direction to go from a given node
-	 * Could generate a very unbalanced tree
+	 * Insert into tree in a random direction.
 	 * 
 	 * @param data: the data to insert
 	 */
