@@ -15,6 +15,10 @@ Implementation of data structures and algorithms
 - Merge Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=009803644887312&h2=Merge-sort) | Code: [- for Arrays](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/mergeSort/MergeSort.java) ; [- for Linked Lists](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedListsProblems_src/MergeSortLinkedList.java)
 - Quick Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=040592152212474&h2=Quick-sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/quickSort/QuickSort.java)
 
+## Ways to Swap Elements in an Array
+
+- [Swaps](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/other/swappingArrayElements/Swaps.java)
+
 # Data Structures
 
 ## Arrays and Dynamic Arrays
