@@ -13,6 +13,7 @@ Implementation of data structures and algorithms
 - Insertion Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=486623696708152&h2=Insertion-Sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/insertionSort/InsertionSort.java)
 - Selection Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=132599071920303&h2=Selection-Sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/selectionSort/SelectionSort.java)
 - Merge Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=009803644887312&h2=Merge-sort) | Code: [- for Arrays](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/mergeSort/MergeSort.java) ; [- for Linked Lists](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedListsProblems_src/MergeSortLinkedList.java)
+- Quick Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=040592152212474&h2=Quick-sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/quickSort/QuickSort.java)
 
 # Data Structures
 
