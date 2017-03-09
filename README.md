@@ -42,9 +42,8 @@ Implementation of data structures and algorithms
 
 ### Binary Trees
 
-- [Notes]()
+- [Notes]() | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_src/BinaryTreeInsertRandomDirection.java)
 - Code: [- Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/InterfaceBinaryTree.java) |  [- Binary Tree Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/Node.java)
-- Code: [- with Random Insert Direction](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_src/BinaryTreeInsertRandomDirection.java) | [- with Array Insertion ]() (complete BT) | [- with Binary Code Insertion Direction]()
 
 ### Binary Tree Traversals
 
