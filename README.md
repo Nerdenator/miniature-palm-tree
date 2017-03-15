@@ -14,6 +14,7 @@ Implementation of data structures and algorithms
 - Selection Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=132599071920303&h2=Selection-Sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/selectionSort/SelectionSort.java)
 - Merge Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=009803644887312&h2=Merge-sort) | Code: [- for Arrays](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/mergeSort/MergeSort.java) ; [- for Linked Lists](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedListsProblems_src/MergeSortLinkedList.java)
 - Quick Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=040592152212474&h2=Quick-sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/quickSort/QuickSort.java)
+- Shell Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=272137401070797&h2=Shell-Sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/shellSort/ShellSort.java)
 
 ## Ways to Swap Elements in an Array
 
@@ -41,9 +42,8 @@ Implementation of data structures and algorithms
 
 ### Binary Trees
 
-- [Notes]()
+- [Notes]() | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_src/BinaryTreeInsertRandomDirection.java)
 - Code: [- Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/InterfaceBinaryTree.java) |  [- Binary Tree Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/Node.java)
-- Code: [- with Random Insert Direction](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_src/BinaryTreeInsertRandomDirection.java) | [- with Array Insertion ]() (complete BT) | [- with Binary Code Insertion Direction]()
 
 ### Binary Tree Traversals
 
