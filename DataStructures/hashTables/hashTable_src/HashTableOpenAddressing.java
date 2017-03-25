@@ -43,15 +43,18 @@ public class HashTableOpenAddressing<MyType> implements InterfaceHashTable<MyTyp
 	int numEntries;
 
 	/**
-	 * Constructor for a hashtable
+	 * Constructor: create a hashtable given capacity and probing type
 	 * 
 	 * @param capacity: table capacity is the next prime number after this
 	 * @param probingType: the type of probing (from the enum)
 	 */
 	@SuppressWarnings("unchecked")
 	public HashTableOpenAddressing(int capacity, PROBING_TYPE probingType) {
+		// set the probing type
 		this.probingType = probingType;
+		// set the capacity to the next prime
 		this.capacity = PrimeNumberOps.getNextPrime(capacity);
+		// initialize the number of entries
 		this.numEntries = 0;
 
 		// initialize the table
@@ -314,6 +317,9 @@ public class HashTableOpenAddressing<MyType> implements InterfaceHashTable<MyTyp
 
 	/**
 	 * The load factor is the number of entries / capacity of the table
+	 * 
+	 * @return the load factor of the table: in this case it has to be a number
+	 *         between 0 and 1, trying to maintain it < 0.6
 	 */
 	@Override
 	public double getLoadFactor() {
@@ -361,7 +367,9 @@ public class HashTableOpenAddressing<MyType> implements InterfaceHashTable<MyTyp
 	}
 
 	/**
-	 * @return the table capacity
+	 * Retrieve the size of the table
+	 * 
+	 * @return the hash table's capacity
 	 */
 	public Object getCapacity() {
 		return capacity;
