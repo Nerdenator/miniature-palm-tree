@@ -167,7 +167,7 @@ public class MaxHeap {
 	}
 
 	/**
-	 * Recursive Heap-up: use this public method for recursive heap-up
+	 * Recursive Heap-up: use this method for recursive heap-up
 	 *
 	 * @param pos - the position of the element we want moved
 	 */
@@ -273,7 +273,7 @@ public class MaxHeap {
 	 *
 	 * @param pos - the position of the element we want moved
 	 */
-	public void heapDownIterative(int pos) {
+	private void heapDownIterative(int pos) {
 		// compare the current element at pos with its two children
 		// and swap the parent node with the larger child
 		int value = array[pos];
@@ -317,7 +317,12 @@ public class MaxHeap {
 		array[pos] = value;
 	}
 
-	public void heapDownRecursive(int pos) {
+	/**
+	 * Recursive Heap-down: use this method for recursive heap-up
+	 *
+	 * @param pos - the position of the element we want moved
+	 */
+	private void heapDownRecursive(int pos) {
 		heapDownRecursive(pos, array[pos]);
 	}
 
@@ -427,7 +432,8 @@ public class MaxHeap {
 	}
 
 	/**
-	 * Remove and return the max value from the heap (node at position 0)
+	 * Remove and return the max value from the heap (node at position 0) and
+	 * then move the new root to its correct position down the heap
 	 * O(log n)
 	 * 
 	 * @param type - 'i' for iterative, 'r' for recursive
@@ -445,7 +451,7 @@ public class MaxHeap {
 		array[0] = array[size - 1];
 		size--;
 
-		// max heapify: if the node at the root is too smal for that position,
+		// max heapify: if the node at the root is too small for that position,
 		// it's moved down the heap into its proper place
 		heapDown(0, type);
 
