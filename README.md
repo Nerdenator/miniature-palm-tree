@@ -15,6 +15,7 @@ Implementation of data structures and algorithms
 - Merge Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=009803644887312&h2=Merge-sort) | Code: [- for Arrays](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/mergeSort/MergeSort.java) ; [- for Linked Lists](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/linkedLists/linkedListsProblems_src/MergeSortLinkedList.java)
 - Quick Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=040592152212474&h2=Quick-sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/quickSort/QuickSort.java)
 - Shell Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=272137401070797&h2=Shell-Sort) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/shellSort/ShellSort.java)
+- Heap Sort: [Notes](https://paper.dropbox.com/doc/Algorithms-yOFym5oauDWCgJw1EkUOo#:uid=835557830548066&h2=Heap-Sort) | [Code - Efficient](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/heaps/heaps_src/MaxHeapSort.java) | [Code - Naive](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Algorithms/sorting/heapSort/HeapSort.java)
 
 ## Ways to Swap Elements in an Array
 
@@ -64,6 +65,10 @@ Implementation of data structures and algorithms
 
 - [Notes]() | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/bst_src/BinarySearchTree.java)
 
+## Heaps
+
+- [Notes](https://paper.dropbox.com/doc/Data-Structures-eeYeogxkRLUQoHyddIn9X#:uid=505161771811555&h2=Heaps---Max-Heap)
+- Code: [- Max Heap](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/heaps/heaps_src/MaxHeap.java) | [- Max Heap Sort](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/heaps/heaps_src/MaxHeapSort.java)
 
 ## Graphs
 
