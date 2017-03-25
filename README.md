@@ -53,8 +53,8 @@ Implementation of data structures and algorithms
 
 ### Binary Trees
 
-- [Notes]() | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_src/BinaryTreeInsertRandomDirection.java)
-- Code: [- Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/InterfaceBinaryTree.java) |  [- Binary Tree Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/Node.java)
+- [Notes]() 
+- Code: [- Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/InterfaceBinaryTree.java) |  [- Binary Tree Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_util/Node.java) | [- Binary Tree Implementation](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/binaryTrees/binaryTree_src/BinaryTreeInsertRandomDirection.java)
 
 ### Binary Tree Traversals
 
@@ -81,6 +81,7 @@ Implementation of data structures and algorithms
   
 ### Graph Traversals
 
-- Notes: [- Breadth-First Search]() ; [- Depth-First Search]() | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graphs_algorithms_src/GraphTraversals.java)
+- Notes: [- Breadth-First Search]() | [- Depth-First Search]() 
+- [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/graphs/graphs_algorithms_src/GraphTraversals.java)
 
 ### Minimum Spanning Trees
