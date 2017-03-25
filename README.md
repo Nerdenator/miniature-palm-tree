@@ -27,10 +27,21 @@ Implementation of data structures and algorithms
 - Arrays: [Notes]()
 - Dynamic Arrays: [Notes]() | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/dynamicArrays/dynamicArrays/DynamicArray.java)
 
-## Stacks and Queues
+## Stacks
 
-- Stacks: [Notes]() | Code: [- Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/InterfaceStack.java) ; [- with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackArray.java) ; [- with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackList.java)
-- Queues: [Notes](https://goo.gl/ui1H6w) | Code: [- Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/InterfaceQueue.java) ; [- with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueArray.java) ; [- with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueList.java)
+- [Notes]() 
+- Code: [- Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/InterfaceStack.java) | [- with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackArray.java) | [- with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/stacks/stacks_src/StackList.java)
+
+## Queues
+
+- [Notes](https://goo.gl/ui1H6w) 
+- Code: [- Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/InterfaceQueue.java) | [- with Array](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueArray.java) | [- with Linked List](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/queues/queues_src/QueueList.java)
+
+## Hash Tables
+
+- [Notes](https://paper.dropbox.com/doc/Data-Structures-eeYeogxkRLUQoHyddIn9X#:uid=842679455192664&h2=Hash-Tables)
+- Code: [- Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/hashTables/hashTable_util/InterfaceHashTable.java) | [- Hash Functions](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/hashTables/hashTable_util/HashFunctions.java) | [- Prime Number Operations](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/hashTables/hashTable_util/PrimeNumberOps.java)
+- Code: [- Hash Tables with Open Addressing](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/hashTables/hashTable_src/HashTableOpenAddressing.java) | [- Hash Tables with Separate Chaining](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/DataStructures/hashTables/hashTable_src/HashTableSeparateChaining.java)
 
 ## Liked Lists
 
