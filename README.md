@@ -50,10 +50,11 @@ Implementation of data structures and algorithms
 - Code: [- Interface](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Theory/binaryTrees/binaryTree_util/InterfaceBinaryTree.java) |  [- Binary Tree Node](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Theory/binaryTrees/binaryTree_util/Node.java) | [- Binary Tree Implementation](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Theory/binaryTrees/binaryTree_src/BinaryTreeInsertRandomDirection.java)
 
 ### Binary Tree Traversals
-- [Notes](https://paper.dropbox.com/doc/BinaryTrees-eeYeogxkRLUQoHyddIn9X#:uid=499731975872431&h2=Binary-Tree-Traversals) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Theory/binaryTrees/bst_src/BinaryTreeTraversals.java) (pre-order, in-order, post-order, level-order) 
+- Notes: [- Pre-Order](https://paper.dropbox.com/doc/Binary-Trees-eeYeogxkRLUQoHyddIn9X#:uid=713787535065755&h2=Pre-Order-(DFS)) | [- In-Order](https://paper.dropbox.com/doc/Binary-Trees-eeYeogxkRLUQoHyddIn9X#:uid=135838900291683&h2=In-Order-(DFS)) | [- Post-Order](https://paper.dropbox.com/doc/Binary-Trees-eeYeogxkRLUQoHyddIn9X#:uid=892312168896542&h2=Post-Order-(DFS)) | [- Level-order](https://paper.dropbox.com/doc/Binary-Trees-eeYeogxkRLUQoHyddIn9X#:uid=715831289401683&h2=Level-Order-(BFS))
+- [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Theory/binaryTrees/binaryTree_src/BinaryTreeTraversals.java)  
 
 ### Binary Search Trees (BST)
-- [Notes](https://paper.dropbox.com/doc/BinaryTrees-eeYeogxkRLUQoHyddIn9X#:uid=258999407277684&h2=Binary-Search-Trees) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Theory/binaryTrees/bst_src/BinarySearchTree.java)
+- [Notes](https://paper.dropbox.com/doc/BinaryTrees-eeYeogxkRLUQoHyddIn9X#:uid=258999407277684&h2=Binary-Search-Trees) | [Code](https://github.com/adinutzyc21/miniature-palm-tree/blob/master/Theory/binaryTrees/binaryTree_src/BinarySearchTree.java)
 
 ## Heaps
 - [Notes](https://paper.dropbox.com/doc/HashTables-LinkedLists-and-Heaps-Ih6NJV2OtH3sjaDrV97pb#:uid=505161771811555&h2=Heaps---Max-Heap)
