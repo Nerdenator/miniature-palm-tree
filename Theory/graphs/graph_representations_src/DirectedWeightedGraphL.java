@@ -1,22 +1,25 @@
-package graph_matrix_src;
+package graph_representations_src;
 
 import graph_util.InterfaceWeightedGraph;
+import graph_util.Item;
 import graph_util.Vertex;
 
 /**
- * Represent a directed weighted graph as an adjacency matrix and support some
- * basic operations
+ * Represent a directed weighted graph as an adjacency list and support
+ * some basic operations
  * 
- * Array adjMat[x][y] = w, the weight of the edge between x & y, or null
+ * List adjList[x] contains all vertices y s.t. (x,y) is an edge
  * 
- * Space: O(n^2)
+ * Space: O(n+m), n vertices, m edges
  * 
  * @author adina
+ *
  */
-public class DirectedWeightedGraphM<MyType> extends DirectedUnweightedGraphM<MyType>
+// TODO: weights better
+public class DirectedWeightedGraphL<MyType> extends DirectedUnweightedGraphL<MyType>
 		implements InterfaceWeightedGraph<MyType> {
 
-	public DirectedWeightedGraphM(int capacity, Vertex<MyType>[] vertices) {
+	public DirectedWeightedGraphL(int capacity, Vertex<MyType>[] vertices) {
 		super(capacity, vertices);
 	}
 
@@ -29,11 +32,7 @@ public class DirectedWeightedGraphM<MyType> extends DirectedUnweightedGraphM<MyT
 	 */
 	@Override
 	public void addEdge(int x, int y) {
-		// only add edge between two existing vertices
-		if (x < 0 || y < 0 || x > numVertices || y > numVertices)
-			return;
-		// add the edge
-		adjMat[x][y] = 0;
+		super.addEdge(x, y);
 	}
 
 	/**
@@ -45,14 +44,14 @@ public class DirectedWeightedGraphM<MyType> extends DirectedUnweightedGraphM<MyT
 	@Override
 	public void addEdge(int x, int y, int w) {
 		// only add edge between two existing vertices, with positive weight
-		if (x < 0 || y < 0 || x > numVertices || y > numVertices || w < 0)
+		if (x > numVertices || y > numVertices || w < 0)
 			return;
 		// add the edge
-		adjMat[x][y] = w;
+		adjList[x].add(new Item(y, w));
 	}
 
 	/**
-	 * Get the weight of the edge between x and y in O(1)
+	 * Get the weight of the edge between x and y in O(n)
 	 * 
 	 * @param x first vertex
 	 * @param y second vertex
@@ -60,9 +59,11 @@ public class DirectedWeightedGraphM<MyType> extends DirectedUnweightedGraphM<MyT
 	 */
 	@Override
 	public int getWeight(int x, int y) {
+		// find the weight of y in the vertices of adjList[x]
+		for (Item it : adjList[x])
+			if (it.vertex == y)
+				return it.weight;
 		// if there is no edge, return a very high weight
-		if (!isEdge(x, y))
-			return Integer.MAX_VALUE;
-		return adjMat[x][y];
+		return Integer.MAX_VALUE;
 	}
 }

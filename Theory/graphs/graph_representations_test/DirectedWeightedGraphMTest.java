@@ -1,4 +1,4 @@
-package graph_matrix_test;
+package graph_representations_test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -8,10 +8,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import graph_matrix_src.UndirectedWeightedGraphM;
+import graph_representations_src.DirectedWeightedGraphM;
 import graph_util.Vertex;
 
-public class UndirectedWeightedGraphMTest {
+public class DirectedWeightedGraphMTest {
 	// number of vertices
 	int numVert = 5;
 	// maximum number of vertices before resize
@@ -20,7 +20,7 @@ public class UndirectedWeightedGraphMTest {
 	// vertices in graph
 	Vertex<Character>[] vert;
 
-	UndirectedWeightedGraphM<Character> G;
+	DirectedWeightedGraphM<Character> G;
 
 	@SuppressWarnings("unchecked")
 	@Before
@@ -32,11 +32,12 @@ public class UndirectedWeightedGraphMTest {
 			vert[v] = new Vertex<Character>((char) (v + 'A'));
 
 		// undirected unweighted graph represented as an adjacency matrix
-		G = new UndirectedWeightedGraphM<Character>(capacity, vert);
+		G = new DirectedWeightedGraphM<Character>(capacity, vert);
 		G.addEdge(0, 1);
+		G.addEdge(1, 0);
 		G.addEdge(1, 2);
 		G.addEdge(0, 3, 3);
-		G.addEdge(3, 4, 2);
+		G.addEdge(3, 2, 2);
 	}
 
 	@Test
@@ -60,20 +61,20 @@ public class UndirectedWeightedGraphMTest {
 
 		assertFalse(G.isEdge(0, 2));
 
-		assertTrue(G.isEdge(3, 4));
-		assertTrue(G.isEdge(4, 3));
+		assertTrue(G.isEdge(3, 2));
+		assertFalse(G.isEdge(2, 3));
 
 		assertFalse(G.isEdge(1, 3));
 
 		// add edge
 		G.addEdge(0, 2);
 		assertTrue(G.isEdge(0, 2));
-		assertTrue(G.isEdge(2, 0));
+		assertFalse(G.isEdge(2, 0));
 
 		// remove edge
-		G.removeEdge(2, 0);
-		assertFalse(G.isEdge(0, 2));
-		assertFalse(G.isEdge(2, 0));
+		G.removeEdge(1, 0);
+		assertTrue(G.isEdge(0, 1));
+		assertFalse(G.isEdge(1, 0));
 
 		// out of bounds vertices for isEdge
 		assertFalse(G.isEdge(-1, 3));
@@ -81,13 +82,11 @@ public class UndirectedWeightedGraphMTest {
 
 		// get the weights
 		assertEquals(0, G.getWeight(0, 1));
-		assertEquals(0, G.getWeight(1, 0));
 		assertEquals(3, G.getWeight(0, 3));
-		assertEquals(2, G.getWeight(4, 3));
+		assertEquals(2, G.getWeight(3, 2));
 
-		// remove edge 0,1
-		G.removeEdge(0, 1);
+		// removed edge 0,1
+		assertFalse(G.isEdge(1, 0));
 		assertEquals(Integer.MAX_VALUE, G.getWeight(1, 0));
-		assertFalse(G.isEdge(0, 1));
 	}
 }

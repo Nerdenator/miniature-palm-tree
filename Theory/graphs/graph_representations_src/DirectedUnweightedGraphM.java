@@ -1,4 +1,4 @@
-package graph_matrix_src;
+package graph_representations_src;
 
 import java.util.ArrayList;
 import java.util.List;

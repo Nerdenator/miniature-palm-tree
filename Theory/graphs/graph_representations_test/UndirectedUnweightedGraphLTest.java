@@ -1,4 +1,4 @@
-package graph_list_test;
+package graph_representations_test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import graph_list_src.UndirectedUnweightedGraphL;
+import graph_representations_src.UndirectedUnweightedGraphL;
 import graph_util.Vertex;
 
 public class UndirectedUnweightedGraphLTest {

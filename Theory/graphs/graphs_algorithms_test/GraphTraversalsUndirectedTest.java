@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import graph_list_src.UndirectedUnweightedGraphL;
-import graph_matrix_src.UndirectedUnweightedGraphM;
+import graph_representations_src.UndirectedUnweightedGraphL;
+import graph_representations_src.UndirectedUnweightedGraphM;
 import graph_util.InterfaceUnweightedGraph;
 import graph_util.Vertex;
 import graphs_algorithms_src.GraphTraversals;

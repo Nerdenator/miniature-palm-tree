@@ -1,23 +1,22 @@
-package graph_list_src;
+package graph_representations_src;
 
 import graph_util.InterfaceWeightedGraph;
-import graph_util.Item;
 import graph_util.Vertex;
 
 /**
- * Represent an unweighted undirected graph as an adjacency list and support
+ * Represent an undirected weighted graph as an adjacency matrix and support
  * some basic operations
  * 
- * List adjList[x] contains all vertices y s.t. (x,y) is an edge
+ * Array adjMat[x][y] = w, the weight of the edge between x & y, or null
  * 
- * Space: O(n+m), n vertices, m edges
+ * Space: O(n^2)
  * 
  * @author adina
  */
-public class UndirectedWeightedGraphL<MyType> extends UndirectedUnweightedGraphL<MyType>
+public class UndirectedWeightedGraphM<MyType> extends UndirectedUnweightedGraphM<MyType>
 		implements InterfaceWeightedGraph<MyType> {
 
-	public UndirectedWeightedGraphL(int capacity, Vertex<MyType>[] vertices) {
+	public UndirectedWeightedGraphM(int capacity, Vertex<MyType>[] vertices) {
 		super(capacity, vertices);
 	}
 
@@ -30,7 +29,12 @@ public class UndirectedWeightedGraphL<MyType> extends UndirectedUnweightedGraphL
 	 */
 	@Override
 	public void addEdge(int x, int y) {
-		super.addEdge(x, y);
+		// only add edge between two existing vertices
+		if (x < 0 || y < 0 || x > numVertices || y > numVertices)
+			return;
+		// add the edge
+		adjMat[x][y] = 0;
+		adjMat[y][x] = 0;
 	}
 
 	/**
@@ -43,15 +47,15 @@ public class UndirectedWeightedGraphL<MyType> extends UndirectedUnweightedGraphL
 	@Override
 	public void addEdge(int x, int y, int w) {
 		// only add edge between two existing vertices, with positive weight
-		if (x < 0 || y < 0 || x > numVertices || y > numVertices)
+		if (x < 0 || y < 0 || x > numVertices || y > numVertices || w < 0)
 			return;
 		// add the edge
-		adjList[x].add(new Item(y, w));
-		adjList[y].add(new Item(x, w));
+		adjMat[x][y] = w;
+		adjMat[y][x] = w;
 	}
 
 	/**
-	 * Get the weight of the edge between x, y in O(n)
+	 * Get the weight of the edge between x, y in O(1)
 	 * 
 	 * @param x first vertex
 	 * @param y second vertex
@@ -59,12 +63,10 @@ public class UndirectedWeightedGraphL<MyType> extends UndirectedUnweightedGraphL
 	 */
 	@Override
 	public int getWeight(int x, int y) {
-		// find the weight of y in the vertices of adjList[x]
-		for (Item it : adjList[x])
-			if (it.vertex == y)
-				return it.weight;
 		// if there is no edge, return a very high weight
-		return Integer.MAX_VALUE;
+		if (!isEdge(x, y))
+			return Integer.MAX_VALUE;
+		return adjMat[x][y];
 	}
 
 }
