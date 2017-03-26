@@ -1,5 +1,7 @@
 .DS_Store
 JavaSpecifics/
+Theory/binaryTrees/binaryTree_src/BinaryTreeInsertUsingArray.java
+Theory/binaryTrees/binaryTree_src/BinaryTreeInsertUsingBinaryCode.java
 */.lock
 */.log
 */.mylyn
