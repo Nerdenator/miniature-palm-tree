@@ -1,7 +1,7 @@
 package bstProblems_src;
 
+import binaryTree_src.BinarySearchTree;
 import binaryTree_util.Node;
-import bst_src.BinarySearchTree;
 
 /**
  * Get the depth of a key (the level it,s on; root is level 0)

@@ -3,8 +3,8 @@ package bstProblems_src;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import binaryTree_src.BinarySearchTree;
 import binaryTree_util.Node;
-import bst_src.BinarySearchTree;
 
 public class GetTreeHeight {
 	/**

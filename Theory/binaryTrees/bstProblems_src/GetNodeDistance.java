@@ -1,7 +1,7 @@
 package bstProblems_src;
 
+import binaryTree_src.BinarySearchTree;
 import binaryTree_util.Node;
-import bst_src.BinarySearchTree;
 
 /**
  * Calculate the distance between two nodes. Given n1 and n2, the distance

@@ -4,8 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import binaryTree_src.BinarySearchTree;
 import bstProblems_src.LowestCommonAncestorBST;
-import bst_src.BinarySearchTree;
 
 public class LowestCommonAncestorBSTTest {
 	BinarySearchTree empty;

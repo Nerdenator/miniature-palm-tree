@@ -1,7 +1,7 @@
 package bstProblems_src;
 
+import binaryTree_src.BinarySearchTree;
 import binaryTree_util.Node;
-import bst_src.BinarySearchTree;
 
 /**
  * Get the minimum and maximum values in a BST

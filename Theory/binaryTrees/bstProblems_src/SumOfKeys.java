@@ -2,8 +2,8 @@ package bstProblems_src;
 
 import java.util.Stack;
 
+import binaryTree_src.BinarySearchTree;
 import binaryTree_util.Node;
-import bst_src.BinarySearchTree;
 
 /**
  * Calculate the sum of all nodes in tree

@@ -1,6 +1,5 @@
-package bst_src;
+package binaryTree_src;
 
-import binaryTree_src.BinaryTreeInsertRandomDirection;
 import binaryTree_util.InterfaceBinaryTree;
 import binaryTree_util.Node;
 

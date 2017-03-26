@@ -1,11 +1,11 @@
-package bst_test;
+package binaryTree_test;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import binaryTree_src.BinarySearchTree;
 import binaryTree_util.Node;
-import bst_src.BinarySearchTree;
 
 public class BinarySearchTreeTest {
 	BinarySearchTree t1, t2;

@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import binaryTree_src.BinarySearchTree;
 import binaryTree_src.BinaryTreeInsertRandomDirection;
 import bstProblems_src.IsTreeBST;
-import bst_src.BinarySearchTree;
 
 public class IsTreeBSTTest {
 	BinaryTreeInsertRandomDirection<Integer> empty;

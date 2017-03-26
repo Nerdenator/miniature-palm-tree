@@ -3,8 +3,8 @@ package bstProblems_src;
 import java.util.HashSet;
 import java.util.Stack;
 
+import binaryTree_src.BinarySearchTree;
 import binaryTree_util.Node;
-import bst_src.BinarySearchTree;
 
 /**
  * Count the duplicate values in a binary tree

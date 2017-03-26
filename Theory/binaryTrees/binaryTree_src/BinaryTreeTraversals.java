@@ -1,4 +1,4 @@
-package bst_src;
+package binaryTree_src;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,7 +1,7 @@
 package bstProblems_src;
 
+import binaryTree_src.BinarySearchTree;
 import binaryTree_util.Node;
-import bst_src.BinarySearchTree;
 
 /**
  * Get the Lowest Common Ancestor given two nodes in a binary search tree. If

@@ -6,9 +6,9 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import binaryTree_src.BinarySearchTree;
 import binaryTree_util.InterfaceBinaryTree;
 import bstProblems_src.AreTreesEqual;
-import bst_src.BinarySearchTree;
 
 public class AreTreesEqualTest {
 	InterfaceBinaryTree<Integer> empty;

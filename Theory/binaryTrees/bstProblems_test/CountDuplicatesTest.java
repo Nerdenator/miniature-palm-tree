@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import binaryTree_src.BinarySearchTree;
 import bstProblems_src.CountDuplicates;
-import bst_src.BinarySearchTree;
 
 public class CountDuplicatesTest {
 
