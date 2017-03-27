@@ -373,7 +373,9 @@ public class MaxHeap {
 
 	/**
 	 * Heapify array by iteratively calling heapDown on every element in the
-	 * array in O(n log n)
+	 * array in O(n) - note this is not O(n log n) because the majority of nodes
+	 * are on bottom levels of tree in binary tree and least amount of work is
+	 * done on them
 	 *
 	 * @param array - the array we want to heapify
 	 * @param type - 'i' for iterative, 'r' for recursive
@@ -390,7 +392,9 @@ public class MaxHeap {
 
 	/**
 	 * Heapify array by recursively calling heapDown on every element in the
-	 * array in O(n log n)
+	 * array in O(n) - note this is not O(n log n) because the majority of nodes
+	 * are on bottom levels of tree in binary tree and least amount of work is
+	 * done on them
 	 *
 	 * @param array - the array we want to heapify
 	 * @param type - 'i' for iterative, 'r' for recursive
