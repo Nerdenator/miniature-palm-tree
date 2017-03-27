@@ -22,8 +22,8 @@ public class MaxHeapSort {
 		char type = 'i';
 		// uses a max-heap and it sorts in ascending order
 		MaxHeap heapMax = new MaxHeap(array.length);
-		// create heap: O(n log n)
-		heapMax.createHeapIterative_HeapUp(array, type);
+		// create heap: O(n) if using heapDown!
+		heapMax.createHeapIterative_HeapDown(array, type);
 
 		// start from the last element
 		int i = array.length - 1;
